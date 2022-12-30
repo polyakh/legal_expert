@@ -1,0 +1,75 @@
+/*https://www.joshwcomeau.com/css/custom-css-reset/#introduction*/
+
+:root {
+  --max-width: 80rem;
+  --border-radius: 0.5rem;
+
+  --color-text: hsl(0deg, 0%, 100%);
+  --color-primary: hsl(221, 100%, 27%);
+
+  --color-background: hsl(0deg, 0%, 85%);
+  --spacing-unit: 0.5rem;
+
+  --font-size-medium: 1rem;
+  --font-size-larg: 2.4rem;
+
+  --fw-bold: 600;
+  --fw-medium: 500;
+
+
+  --header-height: 3.75rem;
+
+  --z-index-modal     : 2;
+  --z-index-cookies-banner     : calc(var(--z-index-modal) + 1);
+
+}
+.max-w {
+  max-width: var(--max-width);
+  padding-left: calc(2 * var(--spacing-unit));
+  padding-right: calc(2 * var(--spacing-unit));
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  line-height: calc(1em + 0.725rem);
+  -webkit-font-smoothing: antialiased;
+}
+html, body, #__next {
+  height: 100%;
+}
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  transition: color 350ms ease 0s, background 350ms ease 0s;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#__next {
+  isolation: isolate;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+ul {
+  padding: 0;
+}

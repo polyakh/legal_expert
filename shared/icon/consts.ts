@@ -1,0 +1,1 @@
+export const SEARCH_PATH_KEY = 'Search';
