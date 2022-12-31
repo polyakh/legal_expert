@@ -4,7 +4,7 @@ import React from "react";
 
 //region Local Imports
 import type {WithAsProps} from "~typings";
-import {appName} from "~shared/consts";
+import {appName, Icon} from "~shared";
 import {Navigation} from "./navigation";
 import styles from "./header.module.css";
 
@@ -21,6 +21,7 @@ function Header({as: Component = 'header'}: HeaderOwnProps) {
                 <div  className={`${styles.header__inner} ${styles.header_sticky}`}>
                     <h1>{appName}</h1>
                     <Navigation/>
+                    <Icon size='medium' name='instagram'/>
                 </div>
             </div>
         </Component>

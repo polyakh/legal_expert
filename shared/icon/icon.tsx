@@ -1,5 +1,5 @@
 //region Global Imports
-import React, {useState, useEffect} from 'react';
+import React, { isValidElement } from 'react';
 import type { ReactNode } from 'react';
 //endregion
 
@@ -7,48 +7,49 @@ import type { ReactNode } from 'react';
 import type {WithAsProps, Size} from "~typings";
 import styles from "./nav-link.module.css";
 import * as icons from "./paths";
-
+import { parseElementProps } from "./utilities";
+import type { IconType } from "./types";
 //endregion
 
 const COMPONENT_KEY = "Icon";
-const sizeOptions = {
-    small: "16",
-    medium: "24",
-    large: "36",
-    xlarge: "48"
-} as const;
-type SizeOptions = typeof sizeOptions;
+
 // https://codesandbox.io/s/540wo78x04?file=/src/components/Icon/Icon.js:698-702
 
 interface CommonProps {
     readonly color: string;
-    readonly size: SizeOptions;
     readonly path: ReactNode;
     readonly viewBox: string;
 }
-interface IconOwnProps extends CommonProps{
-    readonly name: string;
-
+interface IconOwnProps extends Size, Partial<CommonProps> {
+    readonly name: IconType;
 }
 
-const SVGElement = ({ color, size, path, viewBox }: CommonProps) => (
-    <div color={color}>
-        {path}
-    </div>
-);
-function Icon({ name = 'Search', }: IconOwnProps) {
 
-    const selectedIcon = icons[name as 'Search'];
-    let iconPath = null;
-    let iconBox = "";
-    let iconSize = "";
-    // @ts-expect-error
-    let setSize = sizeOptions[size];
+
+const SVGElement = ({ path, ...restProps }: any) => (
+    <svg {...restProps}>
+        {path}
+    </svg>
+);
+function Icon({ name, size }: IconOwnProps) {
+    const { path } = icons[name as IconType];
+
+    if(!isValidElement(path[size])) {
+        return null;
+    }
+
+    const iconProps = parseElementProps({
+        iconPath: path[size],
+        size,
+        // TODO add a type => viewBox
+        viewBox: undefined,
+        name
+    });
+
+
 
     return (
-        <div>
-           y
-        </div>
+        <SVGElement {...iconProps}/>
     )
 }
 
