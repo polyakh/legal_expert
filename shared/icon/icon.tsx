@@ -4,11 +4,12 @@ import type { ReactNode } from 'react';
 //endregion
 
 //region Local Imports
-import type {WithAsProps, Size} from "~typings";
-import styles from "./nav-link.module.css";
+import type { Size } from "~typings";
+import type { IconType } from "./types";
+import styles from "./icon.module.css";
 import * as icons from "./paths";
 import { parseElementProps } from "./utilities";
-import type { IconType } from "./types";
+
 //endregion
 
 const COMPONENT_KEY = "Icon";
@@ -32,7 +33,7 @@ const SVGElement = ({ path, ...restProps }: any) => (
     </svg>
 );
 function Icon({ name, size }: IconOwnProps) {
-    const { path } = icons[name as IconType];
+    const { path, viewBox } = icons[name as IconType];
 
     if(!isValidElement(path[size])) {
         return null;
@@ -42,8 +43,9 @@ function Icon({ name, size }: IconOwnProps) {
         iconPath: path[size],
         size,
         // TODO add a type => viewBox
-        viewBox: undefined,
-        name
+        viewBox: viewBox,
+        name,
+        className: styles.icon
     });
 
 

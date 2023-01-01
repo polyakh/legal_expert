@@ -22,6 +22,7 @@ function Header({as: Component = 'header'}: HeaderOwnProps) {
                     <h1>{appName}</h1>
                     <Navigation/>
                     <Icon size='medium' name='instagram'/>
+                    <Icon size='medium' name='facebook'/>
                 </div>
             </div>
         </Component>

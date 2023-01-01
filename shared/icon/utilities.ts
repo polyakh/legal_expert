@@ -1,5 +1,5 @@
 import { sizeOptions } from './consts';
-export function parseElementProps({iconPath, size, viewBox, name }: any) {
+export function parseElementProps({iconPath, size, viewBox, name, className }: any) {
     // @ts-ignore
     let computedSize = sizeOptions[size];
     return ({
@@ -11,6 +11,6 @@ export function parseElementProps({iconPath, size, viewBox, name }: any) {
         focusable: false,
         path: iconPath,
         "data-icon": name,
-        className: 'icon'
+        className: className
     })
 }
