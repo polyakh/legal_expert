@@ -1,1 +1,2 @@
-export type { WithAsProps, Size, SizeTypes } from "./components";
+export type { WithAsProps, Size, SizeType } from "./components";
+export type { ProfilesKeys } from "./common";

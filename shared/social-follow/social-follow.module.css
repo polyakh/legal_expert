@@ -1,1 +1,5 @@
 .socialFollow {}
+
+.socialFollow__link {
+    color: var(--color-text);
+}

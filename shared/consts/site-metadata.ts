@@ -1,6 +1,12 @@
 export const SITE_URL = "https://"; // ensure compatibility with plugins that require `SITE_URL`
 
-module.exports = {
+export const profiles = {
+    instagram: "https://",
+    facebook: "https://",
+    linkedin: "https://www.linkedin.com/in/nataliia-poliakh-344968191",
+} as const;
+
+export const siteMetadata = {
     siteUrl: SITE_URL,
     siteInfo: {
         title: "",
@@ -18,12 +24,6 @@ module.exports = {
         website: "",
         address: "",
         phone: "",
-        profiles: {
-            twitter: "",
-            github: "",
-            linkedin: "",
-            instagram: "",
-            telegram: "",
-        },
+        profiles: {...profiles},
     },
 };

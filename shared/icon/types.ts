@@ -1,10 +1,9 @@
 import type { ReactElement } from 'react';
-import type { SizeTypes } from '~typings';
+import type { SizeType } from '~typings';
 import { IconTypes } from '~shared/icon/consts';
 
 export type Path = {
-    readonly path: Record<SizeTypes, ReactElement>
+    readonly path: Record<SizeType, ReactElement>
     readonly viewBox?: string;
 }
 
-export type IconType = typeof IconTypes[number];

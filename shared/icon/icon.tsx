@@ -4,16 +4,14 @@ import type { ReactNode } from 'react';
 //endregion
 
 //region Local Imports
-import type { Size } from "~typings";
-import type { IconType } from "./types";
+import type { Size, ProfilesKeys } from "~typings";
+import { sizeMedium } from "~shared";
 import styles from "./icon.module.css";
 import * as icons from "./paths";
 import { parseElementProps } from "./utilities";
-
 //endregion
 
 const COMPONENT_KEY = "Icon";
-
 // https://codesandbox.io/s/540wo78x04?file=/src/components/Icon/Icon.js:698-702
 
 interface CommonProps {
@@ -21,19 +19,17 @@ interface CommonProps {
     readonly path: ReactNode;
     readonly viewBox: string;
 }
-interface IconOwnProps extends Size, Partial<CommonProps> {
-    readonly name: IconType;
+interface IconOwnProps extends Partial<Size>, Partial<CommonProps> {
+    readonly name: ProfilesKeys;
 }
-
-
 
 const SVGElement = ({ path, ...restProps }: any) => (
     <svg {...restProps}>
         {path}
     </svg>
 );
-function Icon({ name, size }: IconOwnProps) {
-    const { path, viewBox } = icons[name as IconType];
+function Icon({ name, size = sizeMedium }: IconOwnProps) {
+    const { path, viewBox } = icons[name as ProfilesKeys];
 
     if(!isValidElement(path[size])) {
         return null;
@@ -47,8 +43,6 @@ function Icon({ name, size }: IconOwnProps) {
         name,
         className: styles.icon
     });
-
-
 
     return (
         <SVGElement {...iconProps}/>
