@@ -1,6 +1,7 @@
 //region Global Imports
 import React from 'react';
 import type { AppProps } from 'next/app';
+import { appWithTranslation } from 'next-i18next'
 //endregion
 
 //region Local Imports
@@ -16,4 +17,4 @@ function MyApp({ Component, pageProps }: AppProps) {
     )
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);
