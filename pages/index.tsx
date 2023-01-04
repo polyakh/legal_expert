@@ -1,11 +1,12 @@
 //region Global Imports
 import React from "react";
-import type { GetStaticProps, InferGetStaticPropsType } from 'next'
+import type { GetStaticProps } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 //endregion
 
 //region Local Imports
 import { Head } from './head';
+const { defaultLocal, commonNS } = require('~root/consts');
 //endregion
 const COMPONENT_KEY = "IndexPage";
 
@@ -22,8 +23,8 @@ export const getStaticProps: GetStaticProps<{}> = async ({
                                                                 locale,
                                                          }) => ({
     props: {
-        ...(await serverSideTranslations(locale ?? 'en', [
-            'common',
+        ...(await serverSideTranslations(locale ?? defaultLocal, [
+            commonNS,
         ])),
     },
 })

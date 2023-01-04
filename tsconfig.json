@@ -8,7 +8,9 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
     "strict": true,
+    "strictFunctionTypes": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -21,7 +23,6 @@
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {
-
       "~components": [
         "components"
       ],
@@ -51,6 +52,12 @@
       ],
       "~styles/*": [
         "styles/*"
+      ],
+      "~root": [
+        "/"
+      ],
+      "~root/*": [
+        "/*"
       ]
     },
     "plugins": [
