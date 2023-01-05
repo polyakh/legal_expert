@@ -1,1 +1,1 @@
-export { default as SocialFollow } from './social-follow';
+export { default as SocialFollow } from "./social-follow";

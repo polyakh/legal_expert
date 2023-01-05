@@ -1,13 +1,13 @@
 .space {
-    display: flex;
+  display: flex;
 }
 
 .small {
-    gap: var(--spacing-unit);
+  gap: var(--spacing-unit);
 }
 .medium {
-    gap: calc(2 * var(--spacing-unit));
+  gap: calc(2 * var(--spacing-unit));
 }
 .large {
-    gap: 1.5rem;
+  gap: 1.5rem;
 }

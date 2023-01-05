@@ -1,8 +1,9 @@
 .footer {
-    background-color: var(--color-primary);
+  background-color: var(--color-primary);
 }
 .footer__inner {
-    padding-top: calc(2 * var(--spacing-unit));
-    padding-bottom: calc(2 * var(--spacing-unit));
+  padding-top: calc(2 * var(--spacing-unit));
+  padding-bottom: calc(2 * var(--spacing-unit));
 }
-.footer__copyright {}
+.footer__copyright {
+}

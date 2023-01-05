@@ -1,3 +1,3 @@
-import {profiles} from "~shared";
+import { profiles } from "~shared";
 
 export type ProfilesKeys = keyof typeof profiles;

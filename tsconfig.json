@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
@@ -23,42 +19,18 @@
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {
-      "~components": [
-        "components"
-      ],
-      "~components/*": [
-        "components/*"
-      ],
-      "~typings": [
-        "typings"
-      ],
-      "~typings/*": [
-        "typings/"
-      ],
-      "~page": [
-        "pages"
-      ],
-      "~page/*": [
-        "pages/*"
-      ],
-      "~shared": [
-        "shared"
-      ],
-      "~shared/*": [
-        "shared/*"
-      ],
-      "~styles": [
-        "styles"
-      ],
-      "~styles/*": [
-        "styles/*"
-      ],
-      "~root": [
-        "/"
-      ],
-      "~root/*": [
-        "/*"
-      ]
+      "~components": ["components"],
+      "~components/*": ["components/*"],
+      "~typings": ["typings"],
+      "~typings/*": ["typings/"],
+      "~page": ["pages"],
+      "~page/*": ["pages/*"],
+      "~shared": ["shared"],
+      "~shared/*": ["shared/*"],
+      "~styles": ["styles"],
+      "~styles/*": ["styles/*"],
+      "~root": ["/"],
+      "~root/*": ["/*"]
     },
     "plugins": [
       {
@@ -66,13 +38,6 @@
       }
     ]
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }

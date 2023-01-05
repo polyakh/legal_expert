@@ -1,7 +1,7 @@
-const defaultLocal = 'uk';
-const commonNS = 'common';
+const defaultLocal = "uk";
+const commonNS = "common";
 
 module.exports = {
-    defaultLocal,
-    commonNS,
+  defaultLocal,
+  commonNS,
 };

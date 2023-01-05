@@ -16,12 +16,10 @@
   --fw-bold: 600;
   --fw-medium: 500;
 
-
   --header-height: 3.75rem;
 
-  --z-index-modal     : 2;
-  --z-index-cookies-banner     : calc(var(--z-index-modal) + 1);
-
+  --z-index-modal: 2;
+  --z-index-cookies-banner: calc(var(--z-index-modal) + 1);
 }
 .max-w {
   max-width: var(--max-width);
@@ -37,7 +35,9 @@
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 * {
@@ -45,7 +45,9 @@
   line-height: calc(1em + 0.725rem);
   -webkit-font-smoothing: antialiased;
 }
-html, body, #__next {
+html,
+body,
+#__next {
   height: 100%;
 }
 body {
@@ -53,14 +55,27 @@ body {
   color: var(--color-text);
   transition: color 350ms ease 0s, background 350ms ease 0s;
 }
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
