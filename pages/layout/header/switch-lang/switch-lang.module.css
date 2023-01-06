@@ -1,0 +1,5 @@
+.switch-lang {
+  cursor: pointer;
+  text-transform: capitalize;
+  color: red;
+}

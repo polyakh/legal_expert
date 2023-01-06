@@ -10,6 +10,6 @@ export const ROUTES_PATH = {
   PATH_SERVICES,
   PATH_CONTACTS,
   PATH_ABOUT_US,
-};
+} as const;
 
 export type RoutesPath = typeof ROUTES_PATH;

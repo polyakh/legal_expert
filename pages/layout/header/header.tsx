@@ -7,8 +7,8 @@ import React from "react";
 import type { WithAsProps } from "~typings";
 import { appName, SocialFollow } from "~shared";
 import { Navigation } from "./navigation";
+import { SwitchLang } from "./switch-lang";
 import styles from "./header.module.css";
-
 //endregion
 
 interface HeaderOwnProps extends WithAsProps {}
@@ -23,6 +23,7 @@ function Header({ as: Component = "header" }: HeaderOwnProps) {
           <h1>{appName}</h1>
           <Navigation />
           <SocialFollow />
+          <SwitchLang />
         </div>
       </div>
     </Component>
