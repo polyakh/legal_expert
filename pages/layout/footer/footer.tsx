@@ -4,9 +4,8 @@ import React from "react";
 
 //region Local Imports
 import type { WithAsProps } from "~typings";
-import { appName } from "~shared";
 import styles from "./footer.module.css";
-
+import { Copyright } from './copyright'
 //endregion
 
 type FooterOwnProps = WithAsProps;
@@ -20,10 +19,7 @@ function Footer({ as: Component = "footer" }: FooterOwnProps) {
     <Component className={styles.footer}>
       <div className="max-w mx-auto">
         <div className={styles.footer__inner}>
-          <span className={styles.footer__copyright}>
-            <span>Copyright</span> © {currentYear} {appName} Inc. All rights
-            reserved.
-          </span>
+         <Copyright />
         </div>
       </div>
     </Component>

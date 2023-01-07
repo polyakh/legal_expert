@@ -5,5 +5,5 @@ export function useToggle(initialInputState = false) {
 
     const handelToggle = useCallback(() => setState(prevState => !prevState), []);
 
-    return [state, handelToggle]
+    return [state, handelToggle] as const;
 }

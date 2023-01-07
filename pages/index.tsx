@@ -2,6 +2,7 @@
 import React from "react";
 import type { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
 //endregion
 
 //region Local Imports

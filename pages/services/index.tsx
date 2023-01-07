@@ -1,10 +1,8 @@
 //region Global Imports
 import React from "react";
-import HeadNext from "next/head";
 //endregion
 
 //region Local Imports
-import { appName } from "~shared/consts";
 //endregion
 
 const COMPONENT_KEY = "Services";

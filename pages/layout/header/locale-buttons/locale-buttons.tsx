@@ -19,7 +19,7 @@ const LocaleButton = ({ lang, isActive, onClick }: any) => {
 
 function LocaleButtons({ as: Component = "div" }: LocaleButtonsOwnProps) {
   const { i18n } = useTranslation("common");
-  const handelChangeLanguage = (lang: string) => i18n.changeLanguage(lang);
+  const handelChangeLanguage = (lang: string) => i18n.changeLanguage('uk');
   const renderLocaleButtons = (activeLanguage: string) =>
     i18n.languages.map((lang) => (
       <LocaleButton
@@ -30,9 +30,9 @@ function LocaleButtons({ as: Component = "div" }: LocaleButtonsOwnProps) {
       />
     ));
   return (
-    <Component role="navigation" className={styles.localeButtons}>
+    <Component role="navigation" onClick={handelChangeLanguage} className={styles.localeButtons}>
       LocaleButtons
-      {renderLocaleButtons(i18n.language)}
+      {/*{renderLocaleButtons(i18n.language)}*/}
     </Component>
   );
 }

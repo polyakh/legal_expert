@@ -1,5 +1,5 @@
 // @ts-check
-const { defaultLocal } = require("./consts");
+const { locales, defaultLocal } = require("./consts");
 const { isDevelopmentENV } = require("./utilities");
 
 /**
@@ -10,7 +10,8 @@ module.exports = {
   debug: isDevelopmentENV(), // isDev => ut
   i18n: {
     defaultLocale: defaultLocal,
-    locales: [defaultLocal, "pl"],
+    locales,
+
   },
   /** To avoid issues when deploying to some paas (vercel...) */
   localePath:
@@ -18,7 +19,7 @@ module.exports = {
       ? require("path").resolve("./public/locales")
       : "locales",
 
-  // reloadOnPrerender: process.env.NODE_ENV === 'development',
+  reloadOnPrerender: isDevelopmentENV,
 
   /**
    * @link https://github.com/i18next/next-i18next#6-advanced-configuration

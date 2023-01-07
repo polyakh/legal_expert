@@ -1,5 +1,4 @@
-.switch-lang {
+.switchLang {
   cursor: pointer;
-  text-transform: capitalize;
-  color: red;
+  text-transform: uppercase;
 }
