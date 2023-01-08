@@ -20,6 +20,10 @@
 
   --z-index-modal: 2;
   --z-index-cookies-banner: calc(var(--z-index-modal) + 1);
+
+  --transition-duration: 0.1s;
+
+  --opacity: 0.8;
 }
 .max-w {
   max-width: var(--max-width);

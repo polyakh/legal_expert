@@ -5,7 +5,7 @@
   transition: opacity 0.1s linear 0.1s;
 }
 .navLink:hover {
-  opacity: 0.8;
+  opacity: var(--opacity);
 }
 .navLink_active {
   text-decoration: var(--color-text);
