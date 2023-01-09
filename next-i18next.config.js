@@ -10,7 +10,7 @@ module.exports = {
   debug: isDevelopmentENV(), // isDev => ut
   i18n: {
     defaultLocale: defaultLocal,
-    locales,
+    locales: locales,
 
   },
   /** To avoid issues when deploying to some paas (vercel...) */

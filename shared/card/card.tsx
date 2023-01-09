@@ -3,17 +3,14 @@ import React, { ReactNode } from "react";
 //endregion
 
 //region Local Imports
-import { WithAsProps } from "~typings";
+import type { WithAsProps, Title, Description, Src } from "~typings";
 import { CardMedia } from "./card-media";
 import { CardMeta } from "./card-meta";
 import styles from "./card.module.css";
 //endregion
 
 
-interface CardOwnProps extends WithAsProps {
-  readonly title: string;// add to common type
-  readonly description: string;// add to common type
-  readonly src: string;
+interface CardOwnProps extends WithAsProps, Title, Description, Src {
   readonly actions: Array<ReactNode>
 }
 const COMPONENT_KEY = "Card";

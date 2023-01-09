@@ -23,7 +23,6 @@ function SwitchLang({ as: Component = "div" }: SwitchLangOwnProps) {
 
   const [uk, pl] = locales
   let currentLang = isLangChanged ? uk: pl;
-  console.log('@', i18n)
   const handelChangeLanguage = (lang: string) => {
     i18n.changeLanguage('uk');
     setIsLangChanged();

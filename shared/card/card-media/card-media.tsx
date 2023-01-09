@@ -4,15 +4,14 @@ import Image from 'next/image'
 //endregion
 
 //region Local Imports
-import { WithAsProps } from "~typings";
+import type { WithAsProps, Src } from "~typings";
 import styles from "./card-media.module.css";
 //endregion
 
 
-interface CardMediaOwnProps extends WithAsProps { // Source Object
+interface CardMediaOwnProps extends WithAsProps, Src { // Source Object
   readonly width?: number;
   readonly height?: number;
-  readonly src: string;
   readonly alt?: string;
 }
 const COMPONENT_KEY = "CardMedia";

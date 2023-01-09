@@ -3,15 +3,12 @@ import React from "react";
 //endregion
 
 //region Local Imports
-import { WithAsProps } from "~typings";
+import type { WithAsProps, Description, Title } from "~typings";
 import styles from "./card-meta.module.css";
 //endregion
 
 
-interface CardMetaOwnProps extends WithAsProps { // Source Object
-      readonly title : string;
-      readonly description: string;
-}
+interface CardMetaOwnProps extends WithAsProps, Description, Title {}
 const COMPONENT_KEY = "CardMeta";
 function CardMeta({
                      as: Component = "div",

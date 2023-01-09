@@ -14,11 +14,10 @@ const COMPONENT_KEY = "Icon";
 // https://codesandbox.io/s/540wo78x04?file=/src/components/Icon/Icon.js:698-702
 
 interface CommonProps {
-  readonly color: string;
   readonly path: ReactNode;
   readonly viewBox: string;
 }
-interface IconOwnProps extends Partial<Size>, Partial<CommonProps> {
+export interface IconOwnProps extends Partial<Size>, Partial<CommonProps> {
   readonly name: ProfilesKeys;
 }
 
@@ -33,7 +32,7 @@ function Icon({ name, size = sizeMedium }: IconOwnProps) {
   }
 
   const iconProps = parseElementProps({
-    iconPath: path[size],
+    path: path[size],
     size,
     // TODO add a type => viewBox
     viewBox: viewBox,

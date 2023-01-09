@@ -1,20 +1,27 @@
+
+//region Local Imports
 import { sizeOptions } from "./consts";
+import type {IconOwnProps} from "~shared/icon";
+import type {ClassName} from "~typings";
+//endregion
+
+interface ParseElementProps extends ClassName, IconOwnProps {}
+
 export function parseElementProps({
-  iconPath,
+  path,
   size,
   viewBox,
   name,
   className,
-}: any) {
+}: ParseElementProps) {
   // @ts-ignore
   let computedSize = sizeOptions[size];
   return {
     viewBox: viewBox ?? `0 0 ${computedSize} ${computedSize}`,
-    // @ts-ignore
     width: computedSize,
     height: computedSize,
     focusable: false,
-    path: iconPath,
+    path,
     "data-icon": name,
     className: className,
   };
