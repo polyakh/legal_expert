@@ -18,7 +18,7 @@ function CardMeta({
   return (
     <Component className={styles.cardMeta}>
         {title}
-        {description}
+        <p>{description}</p>
     </Component>
   );
 }

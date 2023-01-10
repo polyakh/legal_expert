@@ -12,18 +12,18 @@ import { parseElementProps } from "./utilities";
 
 const COMPONENT_KEY = "Icon";
 // https://codesandbox.io/s/540wo78x04?file=/src/components/Icon/Icon.js:698-702
-
 interface CommonProps {
   readonly path: ReactNode;
   readonly viewBox: string;
 }
-export interface IconOwnProps extends Partial<Size>, Partial<CommonProps> {
+export interface IconOwnProps extends Size, Partial<CommonProps> {
   readonly name: ProfilesKeys;
 }
 
-const SVGElement = ({ path, ...restProps }: any) => (
-  <svg {...restProps}>{path}</svg>
-);
+const SVGElement = ({ path, ...restProps }: ReturnType<typeof parseElementProps>) => {
+  return <svg {...restProps}>{path}</svg>
+}
+
 function Icon({ name, size = sizeMedium }: IconOwnProps) {
   const { path, viewBox } = icons[name as ProfilesKeys];
 
@@ -34,7 +34,6 @@ function Icon({ name, size = sizeMedium }: IconOwnProps) {
   const iconProps = parseElementProps({
     path: path[size],
     size,
-    // TODO add a type => viewBox
     viewBox: viewBox,
     name,
     className: styles.icon,

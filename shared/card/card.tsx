@@ -9,9 +9,9 @@ import { CardMeta } from "./card-meta";
 import styles from "./card.module.css";
 //endregion
 
-
-interface CardOwnProps extends WithAsProps, Title, Description, Src {
-  readonly actions: Array<ReactNode>
+export interface CardCommonProps extends Title, Description, Src {}
+interface CardOwnProps extends WithAsProps, CardCommonProps {
+  readonly actions?: Array<ReactNode>
 }
 const COMPONENT_KEY = "Card";
 function Card({ as: Component = "div", title, description, src, actions }: CardOwnProps) {
