@@ -22,10 +22,9 @@ function CardMedia({
   return (
     <Component className={styles.cardMedia}>
       <Image
+          fill={true}
           src={src}
           alt="default alt"
-          width={200}
-          height={200}
       />
     </Component>
   );

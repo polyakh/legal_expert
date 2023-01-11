@@ -1,7 +1,7 @@
 .card {
     border-radius: var(--border-radius);
+    border: 1px solid var(--color-primary);
 }
-
-.card__meta {
-
+.card__actions {
+    padding: var(--spacing-unit);
 }

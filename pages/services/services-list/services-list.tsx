@@ -1,6 +1,5 @@
 //region Global Imports
 import React from "react";
-const crypto = require('crypto')
 //endregion
 
 //region Local Imports
@@ -11,27 +10,30 @@ import { Card } from "~shared/card";
 //endregion
 
 interface ServicesListOwnProps extends WithAsProps {}
-
 const COMPONENT_KEY = "ServicesList";
 
 type ArrayElementType<T> = T extends (infer E)[] ? E : T;
 
-function ServicesList({ as: Component = "ul" }: ServicesListOwnProps) {
+function ServicesList({ as: Component = "div" }: ServicesListOwnProps) {
   const renderServices = () => {
-    return mockDataServices.map((service, idx) => {
+    return mockDataServices.map((service) => {
       return (
             <Card
                 as={'li'}
                 title={service.title}
                 description={service.description}
-                src={service.src} key={service.id}
+                src={service.src}
+                key={service.id}
             />
       )
     })
   };
   return (
-    <Component className={styles.servicesList}>
-      {renderServices()}
+    <Component className='max-w mx-auto'>
+      <ul className={styles.servicesList}>
+        {renderServices()}
+      </ul>
+
     </Component>
   );
 }
