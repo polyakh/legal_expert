@@ -22,6 +22,7 @@
   --z-index-cookies-banner: calc(var(--z-index-modal) + 1);
 
   --transition-duration: 0.1s;
+  --transition-timing-function: ease;
 
   --opacity: 0.8;
 }

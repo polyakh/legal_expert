@@ -4,3 +4,4 @@ export * from "./consts";
 export * from "./icon";
 export * from "./social-follow";
 export * from "./card";
+export * from "./button";

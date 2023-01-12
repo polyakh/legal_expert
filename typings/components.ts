@@ -21,10 +21,6 @@ export interface Description {
   readonly description: string;
 }
 
-export interface Src {
-  readonly src: string;
-}
-
 export interface Id {
   readonly id: string;
 }

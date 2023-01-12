@@ -4,7 +4,7 @@ import React, { useTransition } from "react";
 
 //region Local Imports
 import type { WithAsProps } from "~typings";
-import { appName, SocialFollow } from "~shared";
+import { appName, SocialFollow, Button } from "~shared";
 import { Navigation } from "./navigation";
 import { SwitchLang } from "./switch-lang";
 import styles from "./header.module.css";
@@ -23,6 +23,7 @@ function Header({ as: Component = "header" }: HeaderOwnProps) {
           <Navigation />
           <SocialFollow />
           <SwitchLang />
+          <Button>Button</Button>
         </div>
       </div>
     </Component>
