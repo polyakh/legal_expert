@@ -25,6 +25,12 @@
   --transition-timing-function: ease;
 
   --opacity: 0.8;
+
+
+  --font-weight-bold: 600;
+  --font-weight-medium: 500;
+  --font-weight-light: 400;
+
 }
 .max-w {
   max-width: var(--max-width);
@@ -55,10 +61,12 @@ body,
 #__next {
   height: 100%;
 }
+
 body {
   background-color: var(--color-background);
   color: var(--color-text);
   transition: color 350ms ease 0s, background 350ms ease 0s;
+  font-family: var(--font-family) 'sans-serif';
 }
 img,
 picture,

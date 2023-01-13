@@ -7,6 +7,7 @@ import HeadNext from "next/head";
 import { appName } from "~shared/consts";
 //endregion
 
+
 const COMPONENT_KEY = "Head";
 
 function Head() {

@@ -2,18 +2,33 @@
 import React from "react";
 import type { AppProps } from "next/app";
 import { appWithTranslation } from "next-i18next";
+import { Noto_Sans } from "@next/font/google";
 //endregion
 
 //region Local Imports
 import { Layout } from "./layout";
 import "~styles/globals.css";
+
 //endregion
 
+const notoSansFontF = Noto_Sans({
+    weight: ['600', '500'],
+    subsets: ['latin'],
+})
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+      <>
+          <style jsx global>{`
+        :root {
+          --font-family: ${notoSansFontF.style.fontFamily};
+        }
+      `}</style>
+          <Layout>
+
+              <Component {...pageProps} />
+          </Layout>
+      </>
+
   );
 }
 
