@@ -19,7 +19,6 @@ function CardMedia({
   return (
     <Component className={styles.cardMedia}>
       <Image
-          fill={true}
           src={src}
           alt={alt}
       />

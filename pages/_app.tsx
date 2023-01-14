@@ -8,23 +8,21 @@ import { Noto_Sans } from "@next/font/google";
 //region Local Imports
 import { Layout } from "./layout";
 import "~styles/globals.css";
-
 //endregion
 
 const notoSansFontF = Noto_Sans({
-    weight: ['600', '500'],
+    weight: '500',
     subsets: ['latin'],
 })
 function MyApp({ Component, pageProps }: AppProps) {
   return (
       <>
           <style jsx global>{`
-        :root {
-          --font-family: ${notoSansFontF.style.fontFamily};
-        }
-      `}</style>
+            :root {
+              --noto-sans: ${notoSansFontF.style.fontFamily};
+            }
+          `}</style>
           <Layout>
-
               <Component {...pageProps} />
           </Layout>
       </>

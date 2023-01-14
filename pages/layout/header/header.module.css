@@ -1,6 +1,10 @@
 .header {
   background-color: var(--color-primary);
 }
+.header__logo {
+  text-decoration: none;
+  color: var(--color-text);
+}
 .header__inner {
   display: flex;
   justify-content: space-between;

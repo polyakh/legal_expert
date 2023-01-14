@@ -1,10 +1,12 @@
 //region Global Imports
-import React, { useTransition } from "react";
+import React from "react";
+import Link from "next/link";
 //endregion
 
 //region Local Imports
 import type { WithAsProps } from "~typings";
 import { appName, SocialFollow, Button } from "~shared";
+import { PATH_INDEX } from "~shared/consts";
 import { Navigation } from "./navigation";
 import { SwitchLang } from "./switch-lang";
 import styles from "./header.module.css";
@@ -19,11 +21,13 @@ function Header({ as: Component = "header" }: HeaderOwnProps) {
     <Component className={styles.header}>
       <div className="max-w mx-auto">
         <div className={`${styles.header__inner} ${styles.header_sticky}`}>
-          <h1>{appName}</h1>
+          <Link href={PATH_INDEX} title='Go to the home' className={styles.header__logo}>
+            <h1>{appName}</h1>
+          </Link>
           <Navigation />
           <SocialFollow />
           <SwitchLang />
-          <Button>Button</Button>
+          <Button>Nice</Button>
         </div>
       </div>
     </Component>

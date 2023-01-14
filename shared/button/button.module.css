@@ -5,6 +5,8 @@
     align-items: center;
     justify-content: center;
 
+    padding: 0 calc(4 * var(--spacing-unit));
+
     overflow: hidden;
     cursor: pointer;
 
@@ -12,7 +14,9 @@
 }
 
 .primary {
+    background-color: hsl(217, 100%, 75%);
 }
+.primary:hover {}
 
 .secondary {
 }
