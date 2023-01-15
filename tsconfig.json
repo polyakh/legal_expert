@@ -30,7 +30,9 @@
       "~styles": ["styles"],
       "~styles/*": ["styles/*"],
       "~root": ["/"],
-      "~root/*": ["/*"]
+      "~root/*": ["/*"],
+      "~lib": ["lib"],
+      "~lib/*": ["lib/*"]
     },
     "plugins": [
       {

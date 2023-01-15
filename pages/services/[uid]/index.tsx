@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router'
+import {useRouter} from 'next/router'
 
 const Post = () => {
     const router = useRouter().query;
@@ -7,3 +7,4 @@ const Post = () => {
 }
 
 export default Post
+
