@@ -1,6 +1,6 @@
 // @ts-check
-const { locales, defaultLocal } = require("./consts");
-const { isDevelopmentENV } = require("./utilities");
+const {locales, defaultLocal} = require("./consts");
+const {isDevelopmentENV} = require("./utilities");
 
 /**
  * @type {import('next-i18next').UserConfig}

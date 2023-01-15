@@ -1,24 +1,27 @@
 //region Global Imports
 import React from "react";
-import { useTranslation } from "next-i18next";
+import {useTranslation} from "next-i18next";
 //endregion
 
 //region Local Imports
-import { WithAsProps } from "~typings";
-const { commonNS } = require("~root/consts");
+import {WithAsProps} from "~typings";
+
+const {commonNS} = require("~root/consts");
 import styles from "./locale-buttons.module.css";
+
 //endregion
 
-interface LocaleButtonsOwnProps extends WithAsProps {}
+interface LocaleButtonsOwnProps extends WithAsProps {
+}
 
 const COMPONENT_KEY = "Navigation";
 
-const LocaleButton = ({ lang, isActive, onClick }: any) => {
+const LocaleButton = ({lang, isActive, onClick}: any) => {
   return <div>LocaleButton: {lang}</div>;
 };
 
-function LocaleButtons({ as: Component = "div" }: LocaleButtonsOwnProps) {
-  const { i18n } = useTranslation("common");
+function LocaleButtons({as: Component = "div"}: LocaleButtonsOwnProps) {
+  const {i18n} = useTranslation("common");
   const handelChangeLanguage = (lang: string) => i18n.changeLanguage('uk');
   const renderLocaleButtons = (activeLanguage: string) =>
     i18n.languages.map((lang) => (
@@ -37,6 +40,6 @@ function LocaleButtons({ as: Component = "div" }: LocaleButtonsOwnProps) {
   );
 }
 
-export { COMPONENT_KEY };
-export type { LocaleButtonsOwnProps };
+export {COMPONENT_KEY};
+export type {LocaleButtonsOwnProps};
 export default LocaleButtons;

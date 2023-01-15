@@ -1,24 +1,24 @@
 //region Global Imports
-import React, { type PropsWithChildren } from "react";
+import React, {type PropsWithChildren} from "react";
 //endregion
 
 //region Local Imports
-import { Header, Footer } from "~page/layout";
+import {Header, Footer} from ".";
 import styles from "./layout.module.css";
 //endregion
 const COMPONENT_KEY = "Layout";
 
-function RootLayout({ children }: PropsWithChildren<{}>) {
+function RootLayout({children}: PropsWithChildren<{}>) {
   return (
     <>
-      <Header />
+      <Header/>
       <div className={styles.layout__main}>
-          {children}
+        {children}
       </div>
-      <Footer />
+      <Footer/>
     </>
   );
 }
 
 export default RootLayout;
-export { COMPONENT_KEY };
+export {COMPONENT_KEY};

@@ -1,0 +1,15 @@
+.space {
+  display: flex;
+}
+
+.small {
+  gap: var(--spacing-unit);
+}
+
+.medium {
+  gap: calc(2 * var(--spacing-unit));
+}
+
+.large {
+  gap: 1.5rem;
+}

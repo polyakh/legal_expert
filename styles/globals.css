@@ -32,11 +32,13 @@
   --font-weight-light: 400;
 
 }
+
 .max-w {
   max-width: var(--max-width);
   padding-left: calc(2 * var(--spacing-unit));
   padding-right: calc(2 * var(--spacing-unit));
 }
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -51,11 +53,13 @@
 *::after {
   box-sizing: border-box;
 }
+
 * {
   margin: 0;
   line-height: calc(1em + 0.725rem);
   -webkit-font-smoothing: antialiased;
 }
+
 html,
 body,
 #__next {
@@ -68,6 +72,7 @@ body {
   transition: color 350ms ease 0s, background 350ms ease 0s;
   font-family: var(--noto-sans);
 }
+
 img,
 picture,
 video,
@@ -76,12 +81,14 @@ svg {
   display: block;
   max-width: 100%;
 }
+
 input,
 button,
 textarea,
 select {
   font: inherit;
 }
+
 p,
 h1,
 h2,
@@ -101,6 +108,7 @@ h6 {
 ul {
   padding: 0;
 }
+
 li {
   list-style-type: none;
 }

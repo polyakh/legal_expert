@@ -1,0 +1,14 @@
+.navLink {
+  font-size: var(--font-size-medium);
+  text-decoration: none;
+  color: var(--color-text);
+  transition: opacity 0.1s linear 0.1s;
+}
+
+.navLink:hover {
+  opacity: var(--opacity);
+}
+
+.navLink_active {
+  text-decoration: var(--color-text);
+}

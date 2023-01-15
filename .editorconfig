@@ -1,5 +1,6 @@
 # https://editorconfig.org/
 root = true
+
 [*]
 charset = utf-8
 
@@ -9,8 +10,4 @@ trim_trailing_whitespace = true
 
 # space indentation
 indent_style = space
-indent_size = 4
-
-
-[*.css]
 indent_size = 2

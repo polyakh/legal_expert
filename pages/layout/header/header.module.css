@@ -1,16 +1,19 @@
 .header {
   background-color: var(--color-primary);
 }
+
 .header__logo {
   text-decoration: none;
   color: var(--color-text);
 }
+
 .header__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: var(--header-height);
 }
+
 .header_sticky {
   top: 0;
   position: sticky;

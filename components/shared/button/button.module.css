@@ -1,0 +1,53 @@
+.button {
+  all: unset;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 calc(4 * var(--spacing-unit));
+
+  overflow: hidden;
+  cursor: pointer;
+
+  transition: var(--transition-duration) all var(--transition-timing-function);
+}
+
+.primary {
+  background-color: hsl(217, 100%, 75%);
+}
+
+.primary:hover {
+}
+
+.secondary {
+}
+
+.button_hovered {
+
+}
+
+.button_disabled {
+  cursor: not-allowed;
+}
+
+.small {
+  height: 2rem;
+}
+
+.medium {
+  height: 2.5rem;
+}
+
+.large {
+  height: 3rem;
+}
+
+
+.circle {
+  border-radius: 50%;
+}
+
+.round {
+  border-radius: 0.5rem;
+}

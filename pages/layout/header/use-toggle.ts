@@ -1,9 +1,9 @@
-import { useState, useCallback } from 'react';
+import {useState, useCallback} from 'react';
 
 export function useToggle(initialInputState = false) {
-    const [state, setState] = useState(initialInputState);
+  const [state, setState] = useState(initialInputState);
 
-    const handelToggle = useCallback(() => setState(prevState => !prevState), []);
+  const handelToggle = useCallback(() => setState(prevState => !prevState), []);
 
-    return [state, handelToggle] as const;
+  return [state, handelToggle] as const;
 }
