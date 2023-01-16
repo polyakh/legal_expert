@@ -1,4 +1,3 @@
-export const appName = "Legal Expert";
 export const sizeSmall = "small";
 export const sizeMedium = "medium";
 export const sizeLarge = "large";

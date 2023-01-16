@@ -1,5 +1,5 @@
-import {CardCommonProps} from "~components/shared";
-import {Id} from "~typings";
+import type {CardCommonProps} from "~components/ui";
+import type {Id} from "~shared/typings";
 
 interface MockDataServices extends CardCommonProps, Id {
 }

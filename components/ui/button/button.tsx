@@ -4,8 +4,8 @@ import React, {type ComponentPropsWithoutRef, ReactNode} from 'react';
 
 // region Local Imports
 import {defaultButtonType, ShapeTypes, shapeDefault, VariantTypes, variantPrimary} from './consts';
-import type {WithAsProps, Size} from "~typings";
-import {sizeMedium} from "~components/shared/consts";
+import type {WithAsProps, Size} from "~shared/typings";
+import {sizeMedium} from "~components/consts";
 import styles from "./button.module.css";
 // endregion
 

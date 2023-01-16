@@ -3,7 +3,7 @@ import React, {type PropsWithChildren} from 'react';
 // endregion
 
 // region Local Imports
-import type {WithAsProps} from "~typings";
+import type {WithAsProps} from "~shared/typings";
 import styles from "./divider.module.css";
 // endregion
 

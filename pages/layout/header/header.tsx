@@ -4,9 +4,9 @@ import Link from "next/link";
 //endregion
 
 //region Local Imports
-import type {WithAsProps} from "~typings";
-import {appName, SocialFollow, Button} from "~components/shared";
-import {PATH_INDEX} from "~components/shared/consts";
+import type {WithAsProps} from "~shared/typings";
+import {appName, PATH_INDEX} from "~shared/consts";
+import {SocialFollow, Button} from "~components/ui";
 import {Navigation} from "./navigation";
 import {SwitchLang} from "./switch-lang";
 import styles from "./header.module.css";

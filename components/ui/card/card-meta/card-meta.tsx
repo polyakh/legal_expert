@@ -3,7 +3,7 @@ import React from "react";
 //endregion
 
 //region Local Imports
-import type {WithAsProps, Description, Title} from "~typings";
+import type {WithAsProps, Description, Title} from "~shared/typings";
 import styles from "./card-meta.module.css";
 
 //endregion

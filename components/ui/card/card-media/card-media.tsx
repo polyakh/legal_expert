@@ -4,7 +4,7 @@ import Image, {type ImageProps} from 'next/image'
 //endregion
 
 //region Local Imports
-import type {WithAsProps} from "~typings";
+import type {WithAsProps} from "~shared/typings";
 import styles from "./card-media.module.css";
 
 //endregion

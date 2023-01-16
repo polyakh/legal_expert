@@ -4,7 +4,7 @@ import HeadNext from "next/head";
 //endregion
 
 //region Local Imports
-import {appName} from "~components/shared/consts";
+import {appName} from "~shared/consts";
 //endregion
 
 

@@ -3,8 +3,9 @@ import React from "react";
 //endregion
 
 //region Local Imports
-import {WithAsProps} from "~typings";
-import {NavLink, ROUTES_PATH, type RoutesPath, Space} from "~components/shared";
+import type {WithAsProps} from "~shared/typings";
+import {NavLink, Space} from "~components/ui";
+import {ROUTES_PATH, type RoutesPath} from "~shared/consts";
 import styles from "./navigation.module.css";
 
 //endregion

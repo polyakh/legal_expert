@@ -4,7 +4,7 @@ import Link from "next/link";
 //endregion
 
 //region Local Imports
-import {PATH_INDEX} from '~components/shared/consts'
+import {PATH_INDEX} from '~shared/consts'
 //endregion
 
 const COMPONENT_KEY = "Custom404";

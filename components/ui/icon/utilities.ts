@@ -1,7 +1,7 @@
 //region Local Imports
 import {sizeOptions} from "./consts";
-import type {IconOwnProps} from "~components/shared/icon";
-import type {ClassName} from "~typings";
+import type {IconOwnProps} from "~components/ui/icon";
+import type {ClassName} from "~shared/typings";
 
 //endregion
 

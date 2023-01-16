@@ -4,8 +4,8 @@ import type {PropsWithChildren} from "react";
 //endregion
 
 //region Local Imports
-import type {WithAsProps, Size} from "~typings";
-import {sizeMedium} from "~components/shared/consts";
+import type {WithAsProps, Size} from "~shared/typings";
+import {sizeMedium} from "~components/consts";
 import styles from "./space.module.css";
 //endregion
 

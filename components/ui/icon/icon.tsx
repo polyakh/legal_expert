@@ -3,8 +3,9 @@ import React, {isValidElement, type ReactNode} from "react";
 //endregion
 
 //region Local Imports
-import type {Size, ProfilesKeys} from "~typings";
-import {sizeMedium} from "~components/shared";
+import type {ProfilesKeys} from "~shared/typings";
+import type {Size} from "~shared/typings";
+import {sizeMedium} from "~components/consts";
 import styles from "./icon.module.css";
 import * as icons from "./paths";
 import {parseElementProps} from "./utilities";

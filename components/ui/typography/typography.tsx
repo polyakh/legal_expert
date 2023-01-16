@@ -4,7 +4,7 @@ import React, {type PropsWithChildren} from 'react';
 
 // region Local Imports
 import {TITLE_LVL, LVL2} from './consts';
-import type {WithAsProps} from "~typings";
+import type {WithAsProps} from "~shared/typings";
 // endregion
 
 const COMPONENT_KEY = 'Typography';

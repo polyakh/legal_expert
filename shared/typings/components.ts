@@ -1,6 +1,6 @@
 import type {ElementType} from "react";
 
-import {SizeTypes} from "~shared/consts";
+import {SizeTypes} from "~components/consts";
 
 export interface ClassName {
   readonly className: string;

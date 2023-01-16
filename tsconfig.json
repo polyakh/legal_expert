@@ -43,11 +43,11 @@
       "~components/*": [
         "components/*"
       ],
-      "~typings": [
-        "typings"
+      "~shared": [
+        "shared"
       ],
-      "~typings/*": [
-        "typings/"
+      "~shared/*": [
+        "shared/*"
       ],
       "~styles": [
         "styles"

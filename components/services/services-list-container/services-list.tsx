@@ -4,9 +4,9 @@ import React from "react";
 
 //region Local Imports
 import {mockDataServices} from "./services-list.mocks";
-import type {WithAsProps} from "~typings";
+import type {WithAsProps} from "~shared/typings";
 import styles from "./services-list.module.css";
-import {Card} from "~components/shared/card";
+import {Card} from "~components/ui/card";
 
 //endregion
 

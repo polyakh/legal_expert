@@ -3,7 +3,7 @@ import React, {ReactNode} from "react";
 //endregion
 
 //region Local Imports
-import type {WithAsProps, Title, Description, Src} from "~typings";
+import type {WithAsProps, Title, Description, Src} from "~shared/typings";
 import {CardMedia} from "./card-media";
 import {CardMeta} from "./card-meta";
 import styles from "./card.module.css";

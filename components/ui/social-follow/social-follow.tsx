@@ -5,8 +5,9 @@ import Link from "next/link";
 
 //region Local Imports
 import styles from "./social-follow.module.css";
-import {Icon, Space, profiles} from "~components/shared";
-import type {ProfilesKeys} from "~typings";
+import {profiles} from "~shared/consts";
+import {Icon, Space} from "~components/ui";
+import type {ProfilesKeys} from "~shared/typings";
 //endregion
 const COMPONENT_KEY = "SocialFollow";
 

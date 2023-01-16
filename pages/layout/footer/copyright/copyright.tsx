@@ -3,9 +3,9 @@ import React from "react";
 //endregion
 
 //region Local Imports
-import type {WithAsProps} from "~typings";
+import type {WithAsProps} from "~shared/typings";
 import styles from "./copyright.module.css";
-import {appName} from "~components/shared";
+import {appName} from "~shared/consts";
 //endregion
 
 
