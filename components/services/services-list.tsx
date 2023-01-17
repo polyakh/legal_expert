@@ -3,23 +3,24 @@ import React from "react";
 //endregion
 
 //region Local Imports
-import {mockDataServices} from "./services-list.mocks";
+import type {ServicesModel} from "~lib/services/types";
 import type {WithAsProps} from "~shared/typings";
 import styles from "./services-list.module.css";
 import {Card} from "~components/ui/card";
 
 //endregion
 
-interface ServicesListOwnProps extends WithAsProps {
+interface ServicesListOwnProps<T> extends WithAsProps {
+  readonly services: T;
 }
 
 const COMPONENT_KEY = "ServicesList";
 
 type ArrayElementType<T> = T extends (infer E)[] ? E : T;
 
-function ServicesList({as: Component = "div"}: ServicesListOwnProps) {
+function ServicesList<T extends ServicesModel>({as: Component = "div", services}: ServicesListOwnProps<T>) {
   const renderServices = () => {
-    return mockDataServices.map((service) => {
+    return services.map((service) => {
       return (
         <Card
           as={'li'}

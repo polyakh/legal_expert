@@ -18,11 +18,15 @@ const COMPONENT_KEY = "CardMedia";
 function CardMedia({
                      as: Component = "div",
                      src,
-                     alt = 'default alt'
+                     alt = 'default alt',
+
                    }: CardMediaOwnProps) {
   return (
     <Component className={styles.cardMedia}>
       <Image
+        width={160}
+        height={160}
+        // placeholder='blur'
         src={src}
         alt={alt}
       />

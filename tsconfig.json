@@ -31,9 +31,6 @@
         "lib/*"
       ],
       // front end directories
-      "~pages": [
-        "pages"
-      ],
       "~pages/*": [
         "pages/*"
       ],

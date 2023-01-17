@@ -1,10 +1,10 @@
 export const PATH_INDEX = "/";
 
-const PATH_SERVICES = "/services/";
+export const PATH_SERVICES = "/services/";
 
-const PATH_ABOUT_US = "/about-us/";
+export const PATH_ABOUT_US = "/about-us/";
 
-const PATH_CONTACTS = "/contacts/";
+export const PATH_CONTACTS = "/contacts/";
 
 export const ROUTES_PATH = {
   PATH_SERVICES,

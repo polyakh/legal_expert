@@ -1,7 +1,7 @@
-import {Description, Title} from "~typings";
+import {Id, Name, Slug, Description, Url} from "~shared/typings";
 
-export interface ServiceModel extends Description, Title {
-  readonly src: string;
+export interface ServiceModel extends Id, Name, Slug, Description, Url {
+  readonly otherServiceDetails: string;
 }
 
-export type ServicesModel = ServiceModel[];
+export type ServicesModel = ReadonlyArray<ServiceModel>;

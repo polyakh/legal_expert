@@ -2,16 +2,25 @@
   {
     "id": "serv-1",
     "name": "Service - 1",
-    "description": "porttitor eget dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam"
+    "slug": "slug-1",
+    "description": "porttitor eget dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam",
+    "url": "https://images.prismic.io/jameshome/bf2ddacc-71be-4a0e-8246-c67548d58dad_price.png",
+    "otherServiceDetails": "Lorem ipsum dolor sit amet. Eum repudiandae dolore rem iste molestias hic pariatur totam. Et nobis dolorem sed cupiditate error aut beatae aperiam hic adipisci voluptatem."
   },
   {
     "id": "serv-2",
     "name": "Service - 2",
-    "description": "enim nec dui nunc mattis enim ut tellus elementum sagittis vitae et leo duis ut diam quam nulla porttitor massa id neque aliquam vestibulum morbi"
+    "slug": "slug-2",
+    "description": "enim nec dui nunc mattis enim ut tellus elementum sagittis vitae et leo duis ut diam quam nulla porttitor massa id neque aliquam vestibulum morbi",
+    "url": "https://images.prismic.io/jameshome/bf2ddacc-71be-4a0e-8246-c67548d58dad_price.png",
+    "otherServiceDetails": "Lorem ipsum dolor sit amet. At explicabo odio ea repudiandae perspiciatis ex amet labore et sint voluptatem est doloribus consectetur. Aut sapiente velit ea inventore aliquid ex minima voluptatem hic eveniet facilis aut doloribus omnis. Et temporibus eaque et deserunt enim et blanditiis animi aut rerum accusamus."
   },
   {
     "id": "serv-3",
     "name": "Service - 3",
-    "description": "venenatis cras sed felis eget velit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum integer enim neque volutpat ac tincidunt vitae semper quis lectus nulla at volutpat diam ut"
+    "slug": "slug",
+    "description": "venenatis cras sed felis eget velit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum integer enim neque volutpat ac tincidunt vitae semper quis lectus nulla at volutpat diam ut",
+    "url": "https://images.prismic.io/jameshome/bf2ddacc-71be-4a0e-8246-c67548d58dad_price.png",
+    "otherServiceDetails": "Lorem ipsum dolor sit amet. Sed iste impedit aut laborum omnis aut totam corporis eos quam molestiae 33 dolores commodi. Quo quos deserunt sit consectetur deleniti vel voluptates dolore ad mollitia quibusdam ab quam enim et laudantium sunt sed libero quae. Aut quis explicabo qui quae voluptate aut cumque odit ad nostrum beatae et distinctio sapiente ut esse nihil ex vero consequatur. Rem eligendi voluptate in mollitia optio sit quae quasi."
   }
 ]

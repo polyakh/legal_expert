@@ -1,27 +1,26 @@
+//region Global Imports
 import type {NextApiRequest, NextApiResponse} from 'next';
+//endregion
 
 
 //region Local Imports
 import {ServicesModel} from '~lib/services/types';
-import {BASE_API_PATH} from "~pages/api/consts";
+import mockServices from '~lib/services/mock-services.json';
 
 //endregion
 
 interface ApiServicesRequest extends NextApiRequest {
-  body: { readonly services?: ServicesModel };
+  body: { readonly id?: string };
 }
 
-export async function loadServices() {
-  const response = await fetch(`${process.env.API_URL}/api/services`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
-  const services = await response.json()
-  return {
-    props: {
-      services,
-    },
-  };
+export default function handler(
+  {method, body: {id: serviceId}}: ApiServicesRequest,
+  res: NextApiResponse<ServicesModel>
+) {
+  if (method === 'POST') {
+    // const findResults = mockServices.find((service) => service.id === serviceId);
+    res.status(200).json(mockServices);
+  } else {
+    res.status(400).json([]);
+  }
 }
