@@ -17,7 +17,7 @@ export default function handler(
   {method, body: {id: serviceId}}: ApiServicesRequest,
   res: NextApiResponse<ServicesModel>
 ) {
-  if (method === 'POST') {
+  if (method === 'GET') {
     // const findResults = mockServices.find((service) => service.id === serviceId);
     res.status(200).json(mockServices);
   } else {

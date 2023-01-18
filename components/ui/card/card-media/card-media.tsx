@@ -19,7 +19,6 @@ function CardMedia({
                      as: Component = "div",
                      src,
                      alt = 'default alt',
-
                    }: CardMediaOwnProps) {
   return (
     <Component className={styles.cardMedia}>
