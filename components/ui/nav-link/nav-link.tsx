@@ -1,27 +1,32 @@
 //region Global Imports
-import React, {useState, useEffect, type PropsWithChildren} from "react";
+import React, {useState, useEffect, type AnchorHTMLAttributes} from "react";
 import Link, {type LinkProps} from "next/link";
 import {useRouter} from "next/router";
 //endregion
 
 //region Local Imports
 import styles from "./nav-link.module.css";
+import { getClassNames } from "~components/utilities";
 //endregion
 
+const BLANK = "_blank";
+interface NavLinkOwnProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href'>, LinkProps {
+  readonly activeClassName?: string;
+}
+
 const COMPONENT_KEY = "NavLink";
+
+
 
 // https://github.com/vercel/next.js/blob/canary/examples/active-class-name/components/ActiveLink.tsx
 function NavLink({
                    children,
                    activeClassName = styles.navLink_active,
                    className = styles.navLink,
+                   target,
+                   rel: relProp,
                    ...restProps
-                 }: PropsWithChildren<
-  {
-    readonly className?: string;
-    readonly activeClassName?: string;
-  } & LinkProps
->) {
+                 }: NavLinkOwnProps) {
   const {asPath, isReady} = useRouter();
   const [computedClassName, setComputedClassName] = useState(className);
   useEffect(() => {
@@ -39,7 +44,7 @@ function NavLink({
 
       const newClassName =
         linkPathname === activePathname
-          ? `${className} ${activeClassName}`.trim()
+          ? getClassNames(className, activeClassName)
           : className;
 
       if (newClassName !== computedClassName) {
@@ -55,9 +60,9 @@ function NavLink({
     className,
     computedClassName,
   ]);
-
+  const rel = target === BLANK ? { rel: "noopener noreferrer" } : {...(relProp ? {rel: relProp}: {})};
   return (
-    <Link className={computedClassName} {...restProps}>
+    <Link className={computedClassName} {...rel} {...restProps}>
       {children}
     </Link>
   );

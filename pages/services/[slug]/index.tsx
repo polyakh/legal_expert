@@ -12,7 +12,7 @@ const Post = (props: any) => {
 export default Post
 
 
-export async function getStaticProps({params: {slug}}: any) {
+export async function getStaticProps({params: {slug: inputSlug}}: any) {
   const services = await (
     await fetch(`${process.env.API_URL}${PATH_SERVICES}`, {
         headers: {

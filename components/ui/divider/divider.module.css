@@ -1,5 +1,5 @@
 .divider {
-  background-color: hsla(var(--color-background), 0.3);
+  border-color: var(--color-background);
   border-style: solid;
   border-bottom-width: thin;
 }

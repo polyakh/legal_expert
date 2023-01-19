@@ -24,3 +24,7 @@ export interface Description {
   readonly description: string;
 }
 
+export interface HasComponentToShow {
+  readonly hasComponentToShow?: boolean;
+}
+

@@ -1,3 +1,7 @@
 .cardMeta {
   padding: 1rem;
 }
+.cardMeta__title,
+.cardMeta__description {
+  color: var(--color-gray-200);
+}
