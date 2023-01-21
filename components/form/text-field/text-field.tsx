@@ -3,8 +3,9 @@ import React, { type InputHTMLAttributes } from "react";
 //endregion
 
 //region Local Imports
-import type {WithAsProps} from "~shared/typings";
-import styles from "./services-list.module.css";
+import type {WithAsProps, Value} from "~shared/typings";
+import { useFieldState } from "./use-field-state";
+import styles from "./text-field.module.css";
 
 //endregion
 
@@ -14,14 +15,16 @@ type InputAttributes = Omit<
 >;
 
 
-interface TextFieldOwnProps extends WithAsProps {
+interface TextFieldOwnProps extends WithAsProps, Value {
+
 }
 
 const COMPONENT_KEY = "TextField";
 
-function TextField({as: Component = "div"}: TextFieldOwnProps) {
+function TextField({as: Component = "input", value}: TextFieldOwnProps) {
+  const { onChange } = useFieldState({ value });
   return (
-    <Component className='max-w mx-auto'></Component>
+    <Component onChange={onChange}>TextField</Component>
   );
 }
 

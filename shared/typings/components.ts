@@ -16,6 +16,10 @@ export interface Size {
   readonly size: SizeType;
 }
 
+export interface Value {
+  readonly value: string;
+}
+
 export interface Title {
   readonly title: string;
 }
