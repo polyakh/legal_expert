@@ -1,2 +1,4 @@
-// This is nearly 3rem of line-height in the styles.
-export const DEFAULT_LINE_HEIGHT = "48";
+export const inputTypeEmail = "email";
+export const inputTypeText = "text";
+
+export const InputTypes = [inputTypeEmail, inputTypeText] as const;

@@ -1,5 +1,5 @@
 // #region Global Imports
-import React, { type ChangeEventHandler } from "react";
+import React, { type ChangeEventHandler, type ChangeEvent, useState, useCallback } from "react";
 // #endregion Global Imports
 
 
@@ -27,10 +27,10 @@ export const useFieldState = <EVT extends UseFieldStatesOwnProps>(
     onChange: onChangeProp,
     value: valueProp,
   }: any) => {
-  const [value, setValue] = React.useState();
+  const [value, setValue] = useState();
 
-  const onChange = React.useCallback(
-    (event: React.ChangeEvent<EVT>) => {
+  const onChange = useCallback(
+    (event: ChangeEvent<EVT>) => {
       onChangeProp && onChangeProp(event);
 
       const input = event.currentTarget;

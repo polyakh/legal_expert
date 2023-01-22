@@ -1,30 +1,50 @@
 //region Global Imports
-import React, { type InputHTMLAttributes } from "react";
+import React, { type InputHTMLAttributes, type HTMLInputTypeAttribute } from "react";
 //endregion
 
 //region Local Imports
-import type {WithAsProps, Value} from "~shared/typings";
+import type {WithAsProps, Size} from "~shared/typings";
+import {getClassNames} from "~components/utilities";
 import { useFieldState } from "./use-field-state";
 import styles from "./text-field.module.css";
+import { inputTypeText, type InputTypes } from "./consts";
 
 //endregion
 
-type InputAttributes = Omit<
+type TextFieldAttributes = Omit<
   InputHTMLAttributes<HTMLInputElement>,
-  "type" | "defaultValue" | "value"
+  "type"
+  | "size"
 >;
-
-
-interface TextFieldOwnProps extends WithAsProps, Value {
-
+interface TextFieldOwnProps extends WithAsProps, Partial<Size>, TextFieldAttributes {
+  // AllowInputType
+  readonly type?: typeof InputTypes[number];
 }
 
 const COMPONENT_KEY = "TextField";
 
-function TextField({as: Component = "input", value}: TextFieldOwnProps) {
+function TextField({
+                     as: Component = "input",
+                     value,
+                     type = inputTypeText,
+                     placeholder,
+                     disabled,
+                     name
+}: TextFieldOwnProps) {
+
+  const computedStyles = getClassNames(styles.textField)
   const { onChange } = useFieldState({ value });
   return (
-    <Component onChange={onChange}>TextField</Component>
+    <Component
+      type={type}
+      disabled={disabled}
+      placeholder={placeholder}
+      className={computedStyles}
+      onChange={onChange}
+      name={name}
+    >
+      TextField
+    </Component>
   );
 }
 

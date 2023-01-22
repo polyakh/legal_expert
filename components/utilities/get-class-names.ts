@@ -1,5 +1,5 @@
-function getClassNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
+function getClassNames(...inputClasses: string[]) {
+  return inputClasses.filter(Boolean).join(' ');
 }
 
 export {getClassNames};

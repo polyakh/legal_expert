@@ -1,1 +1,14 @@
 .textField {}
+
+
+.small {
+  height: 1.5rem;
+}
+
+.medium {
+  height: 2rem;
+}
+
+.large {
+  height: 2.5rem;
+}

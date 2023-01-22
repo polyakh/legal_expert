@@ -5,6 +5,7 @@ import React, {type ComponentPropsWithoutRef, ReactNode} from 'react';
 // region Local Imports
 import {defaultButtonType, ShapeTypes, shapeDefault, VariantTypes, variantPrimary} from './consts';
 import type {WithAsProps, Size} from "~shared/typings";
+import {getClassNames} from "~components/utilities";
 import {sizeMedium} from "~components/consts";
 import styles from "./button.module.css";
 // endregion
@@ -31,7 +32,7 @@ const Button = ({
                   icon,
                 }: ButtonOwnProps) => {
 
-  const computedClassName = `${styles.button} ${styles[shape]} ${styles[size]} ${styles[variant]}`;
+  const computedClassName = getClassNames(styles.button, styles[shape], styles[size], styles[variant]);
   return <Component onClick={onClick} type={type} disabled={disabled} className={computedClassName}>
     {icon ?? children}
   </Component>
