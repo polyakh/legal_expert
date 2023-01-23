@@ -19,7 +19,7 @@ interface CommonProps {
   readonly viewBox: string;
 }
 
-export interface IconOwnProps extends Size, Partial<CommonProps> {
+export interface IconOwnProps extends Partial<Size>, Partial<CommonProps> {
   readonly name: ProfilesKeys;
 }
 

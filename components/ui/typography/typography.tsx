@@ -3,14 +3,14 @@ import React, {type PropsWithChildren} from 'react';
 // endregion
 
 // region Local Imports
-import {TITLE_LVL, LVL2} from './consts';
+import {TitleLVLTypes, LVL2} from './consts';
 import type {WithAsProps} from "~shared/typings";
 // endregion
 
 const COMPONENT_KEY = 'Typography';
 
 export interface TypographyOwnProps extends WithAsProps {
-  readonly lvl?: typeof TITLE_LVL[number]
+  readonly lvl?: typeof TitleLVLTypes[number]
 }
 
 const Typography = ({lvl = LVL2, children, ...props}: PropsWithChildren<TypographyOwnProps>) => {

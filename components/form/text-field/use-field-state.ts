@@ -34,7 +34,7 @@ export const useFieldState = <EVT extends UseFieldStatesOwnProps>(
       onChangeProp && onChangeProp(event);
 
       const input = event.currentTarget;
-      setValue(input.value);
+      // setValue(input.value);
     },
     [onChangeProp]
   );

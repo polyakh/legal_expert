@@ -1,6 +1,6 @@
 import React from "react";
 
-import type {Path} from "~components/shared/icon/types";
+import type {Path} from "~components/ui/icon/types";
 
 const Instagram: Path = {
   path: {

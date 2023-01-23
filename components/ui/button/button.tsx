@@ -1,5 +1,5 @@
 // region Global Imports
-import React, {type ComponentPropsWithoutRef, ReactNode} from 'react';
+import type { ComponentPropsWithoutRef, ReactNode} from 'react';
 // endregion
 
 // region Local Imports

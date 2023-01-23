@@ -2,15 +2,16 @@
 import {sizeOptions} from "./consts";
 import type {IconOwnProps} from "~components/ui/icon";
 import type {ClassName} from "~shared/typings";
-
 //endregion
+import {sizeMedium} from "~components/consts";
+
 
 interface ParseElementProps extends ClassName, IconOwnProps {
 }
 
 export function parseElementProps({
                                     path,
-                                    size,
+                                    size = sizeMedium,
                                     viewBox,
                                     name,
                                     className,

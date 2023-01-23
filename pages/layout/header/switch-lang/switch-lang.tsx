@@ -4,7 +4,7 @@ import {useTranslation} from "next-i18next";
 //endregion
 
 //region Local Imports
-import type {WithAsProps} from "~typings";
+import type {WithAsProps} from "~shared/typings";
 import {useToggle} from "~pages/layout/header/use-toggle";
 
 const {locales} = require("~root/consts");
