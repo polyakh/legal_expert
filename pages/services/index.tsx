@@ -1,5 +1,4 @@
 //region Global Imports
-import React from "react";
 import type {GetStaticProps} from 'next';
 //endregion
 

@@ -1,5 +1,3 @@
-import React from "react";
-
 import type {Path} from "~components/ui/icon/types";
 
 const Facebook: Path = {

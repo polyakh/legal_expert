@@ -1,7 +1,3 @@
-//region Global Imports
-import React from "react";
-//endregion
-
 //region Local Imports
 import type {ServicesModel} from "~lib/services/types";
 import type {WithAsProps} from "~shared/typings";

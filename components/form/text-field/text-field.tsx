@@ -1,5 +1,5 @@
 //region Global Imports
-import React, { type InputHTMLAttributes, type HTMLInputTypeAttribute } from "react";
+import { type InputHTMLAttributes, type HTMLInputTypeAttribute } from "react";
 //endregion
 
 //region Local Imports

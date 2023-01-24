@@ -1,5 +1,4 @@
 //region Global Imports
-import React from "react";
 import Image, {type ImageProps} from 'next/image'
 //endregion
 

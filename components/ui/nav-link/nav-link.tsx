@@ -1,5 +1,5 @@
 //region Global Imports
-import React, {useState, useEffect, type AnchorHTMLAttributes} from "react";
+import {useState, useEffect, type AnchorHTMLAttributes} from "react";
 import Link, {type LinkProps} from "next/link";
 import {useRouter} from "next/router";
 //endregion

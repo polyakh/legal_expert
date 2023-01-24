@@ -1,5 +1,5 @@
 // region Global Imports
-import React, {type PropsWithChildren} from 'react';
+import {type PropsWithChildren} from 'react';
 // endregion
 
 // region Local Imports

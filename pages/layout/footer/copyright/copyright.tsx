@@ -1,7 +1,3 @@
-//region Global Imports
-import React from "react";
-//endregion
-
 //region Local Imports
 import type {WithAsProps} from "~shared/typings";
 import styles from "./copyright.module.css";

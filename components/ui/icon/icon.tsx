@@ -1,5 +1,5 @@
 //region Global Imports
-import React, {isValidElement, type ReactNode} from "react";
+import {isValidElement, type ReactNode} from "react";
 //endregion
 
 //region Local Imports
