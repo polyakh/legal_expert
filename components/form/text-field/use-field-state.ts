@@ -2,7 +2,6 @@
 import { type ChangeEventHandler, type ChangeEvent, useState, useCallback } from "react";
 // #endregion Global Imports
 
-
 import type { Value } from '~shared/typings';
 
 type UseFieldStatesOwnProps = HTMLInputElement;
@@ -15,9 +14,7 @@ interface EventHandlers<EVT extends UseFieldStatesOwnProps> extends Value{
 interface ReturnValue<EVT extends
   UseFieldStatesOwnProps> extends
   Required<EventHandlers<EVT>>
-
 {
-
   readonly valued?: string;
   readonly hasFocused: boolean;
 }
