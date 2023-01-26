@@ -1,11 +1,11 @@
 // @ts-check
-const {locales, defaultLocal} = require("./consts");
-const {isDevelopmentENV} = require("./utilities");
+import {locales, defaultLocal} from "./consts";
+import {isDevelopmentENV} from "./utilities";
 
 /**
  * @type {import('next-i18next').UserConfig}
  */
-module.exports = {
+export const i18n = {
   // https://www.i18next.com/overview/configuration-options#logging
   debug: isDevelopmentENV(), // isDev => ut
   i18n: {
@@ -19,7 +19,7 @@ module.exports = {
       ? require("path").resolve("./public/locales")
       : "locales",
 
-  reloadOnPrerender: isDevelopmentENV,
+  reloadOnPrerender: isDevelopmentENV(),
 
   /**
    * @link https://github.com/i18next/next-i18next#6-advanced-configuration

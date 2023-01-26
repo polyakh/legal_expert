@@ -5,7 +5,7 @@ import {useTranslation} from "next-i18next";
 //region Local Imports
 import {WithAsProps} from "~shared/typings";
 
-const {commonNS} = require("~root/consts");
+import {commonNS} from "/consts";
 import styles from "./locale-buttons.module.css";
 
 //endregion

@@ -6,7 +6,7 @@ import {useTranslation} from "next-i18next";
 import type {WithAsProps} from "~shared/typings";
 import {useToggle} from "~pages/layout/header/use-toggle";
 
-const {locales} = require("~root/consts");
+import {locales} from "/consts";
 import styles from "./switch-lang.module.css";
 
 //endregion

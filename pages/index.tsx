@@ -6,7 +6,7 @@ import Image from "next/image";
 import styles from "./index.module.css";
 import {Head} from "./head";
 
-const {defaultLocal, commonNS} = require("~root/consts");
+import {defaultLocal, commonNS} from "/consts";
 //endregion
 const COMPONENT_KEY = "IndexPage";
 
