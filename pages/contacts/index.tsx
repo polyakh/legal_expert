@@ -1,10 +1,12 @@
 
+
+import { Form } from '~components/form'
 const COMPONENT_KEY = "Contacts";
 
 function Contacts() {
   return (
     <div>
-      contacts
+
     </div>
   );
 }

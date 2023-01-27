@@ -3,20 +3,22 @@ import {type PropsWithChildren} from 'react';
 // endregion
 
 // region Local Imports
-import {TitleLVLTypes, LVL2} from './consts';
 import type {WithAsProps} from "~shared/typings";
+import {getClassNames} from "~components/utilities"
+import styles from "./typography.module.css"
 // endregion
 
 const COMPONENT_KEY = 'Typography';
 
-export interface TypographyOwnProps extends WithAsProps {
-  readonly lvl?: typeof TitleLVLTypes[number]
+export interface TypographyOwnProps extends WithAsProps, HTMLElement {
+
+  readonly hasUnderline?: boolean;
+  readonly hasEllipsis?: boolean;
 }
 
-const Typography = ({lvl = LVL2, children, ...props}: PropsWithChildren<TypographyOwnProps>) => {
-  const {as: Component = `h${lvl}`} = props;
-  // @ts-ignore
-  return <Component>
+const Typography = ({as: Component = 'div', children, hasUnderline }: PropsWithChildren<TypographyOwnProps>) => {
+  const computedStyles = getClassNames(styles.typography, hasUnderline ? styles.underline : '')
+  return <Component className={computedStyles}>
     {children}
   </Component>
 }
