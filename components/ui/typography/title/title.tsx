@@ -4,7 +4,7 @@ import type { PropsWithChildren } from 'react';
 
 // region Local Imports
 import type {WithAsProps} from "~shared/typings";
-import {TitleLVLTypes, LVL2} from "./consts";
+import {TitleLVLTypes, LVL1} from "./consts";
 import {getClassNames} from "~components/utilities"
 import styles from "./title.module.css"
 // endregion
@@ -15,10 +15,10 @@ export interface TitleOwnProps extends WithAsProps {
   readonly lvl?: typeof TitleLVLTypes[number]
 }
 
-const Title = ({lvl = LVL2, children, ...restProps}: PropsWithChildren<TitleOwnProps>) => {
+const Title = ({lvl = LVL1, children, ...restProps}: PropsWithChildren<TitleOwnProps>) => {
   const {as: Component = `h${lvl}`} = restProps;
   const computedClassName = getClassNames(styles.title, `h${lvl}`, )
-  return <Component claaName={computedClassName}>
+  return <Component className={computedClassName}>
     {children}
   </Component>
 }

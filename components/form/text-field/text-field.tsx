@@ -1,5 +1,5 @@
 //region Global Imports
-import { type InputHTMLAttributes, type HTMLInputTypeAttribute } from "react";
+import { type InputHTMLAttributes, type HTMLInputTypeAttribute, useId } from "react";
 //endregion
 
 //region Local Imports
@@ -29,22 +29,20 @@ function TextField({
                      type = inputTypeText,
                      placeholder,
                      disabled,
-                     name
+                     name,
 }: TextFieldOwnProps) {
-
   const computedStyles = getClassNames(styles.textField)
   const { onChange } = useFieldState({ value });
   return (
     <Component
+      id={type}
       type={type}
       disabled={disabled}
       placeholder={placeholder}
       className={computedStyles}
       onChange={onChange}
       name={name}
-    >
-      TextField
-    </Component>
+    />
   );
 }
 

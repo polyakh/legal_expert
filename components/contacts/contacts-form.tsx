@@ -1,47 +1,25 @@
 //region Local Imports
-import type {ServicesModel} from "~lib/services/types";
 import type {WithAsProps} from "~shared/typings";
-import styles from "./services-list.module.css";
-import {Card, NavLink} from "~components/ui";
-import {PATH_SERVICES} from "~shared/consts";
-
+import {TextField, Form, InputTypes, Button} from "~components";
 //endregion
 
-interface ServicesListOwnProps<T> extends WithAsProps {
-  readonly services: T;
-}
 
-const COMPONENT_KEY = "ServicesList";
+const COMPONENT_KEY = "ContactsForm";
 
-type ArrayElementType<T> = T extends (infer E)[] ? E : T;
 
-function ServicesList<T extends ServicesModel>({as: Component = "div", services}: ServicesListOwnProps<T>) {
-  const renderServices = () => {
-    return services.map((service) => {
-      return (
-        <NavLink
-          key={service.id}
-          href={`${PATH_SERVICES}[slug]`}
-          as={`${PATH_SERVICES}${service.slug}`}
-        >
-          <Card
-            as={'li'}
-            title={service.title}
-            description={service.description}
-            src={service.url}
-          />
-        </NavLink>
-      )
-    })
-  };
+function ContactsForm({as: Component = "div"}: WithAsProps) {
+  const handleFormSubmit = () => {}
   return (
-    <Component className='max-w mx-auto'>
-      <ul className={styles.servicesList}>
-        {renderServices()}
-      </ul>
-    </Component>
+    <Form onSubmit={handleFormSubmit}>
+      {InputTypes.map(type =>  <TextField
+        key={type}
+        placeholder={`Enter a ${type}`}
+        required
+      />)}
+      <Button>Submit</Button>
+    </Form>
   );
 }
 
 export {COMPONENT_KEY};
-export default ServicesList;
+export default ContactsForm;

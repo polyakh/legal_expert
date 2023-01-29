@@ -1,4 +1,10 @@
-.textField {}
+.textField {
+
+  width: 100%;
+  border-width: var(--border-width);
+  border-style: var(--border-style);
+  transition: all var(--transition-duration);
+}
 
 
 .small {

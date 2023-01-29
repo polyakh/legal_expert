@@ -3,6 +3,8 @@
 :root {
   --max-width: 80rem;
   --border-radius: 0.5rem;
+  --border-width: 0.063rem;
+  --border-style: solid;
 
   --color-text: hsl(0deg, 0%, 100%);
   --color-primary: hsl(221, 100%, 27%);

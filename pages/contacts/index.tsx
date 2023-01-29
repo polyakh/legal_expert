@@ -1,13 +1,15 @@
 
 
-import { Form } from '~components/form'
+import { Form, Title, ContactsForm } from '~components';
+import type { WithAsProps } from '~shared/typings';
 const COMPONENT_KEY = "Contacts";
 
-function Contacts() {
+function Contacts({as: Component = 'div'}: WithAsProps) {
   return (
-    <div>
-
-    </div>
+    <Component>
+      <Title>Contacts</Title>
+      <ContactsForm />
+    </Component>
   );
 }
 

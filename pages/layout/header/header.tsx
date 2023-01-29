@@ -5,7 +5,7 @@ import Link from "next/link";
 //region Local Imports
 import type {WithAsProps} from "~shared/typings";
 import {appName, PATH_INDEX} from "~shared/consts";
-import {SocialFollow, Button} from "~components/ui";
+import {SocialFollow, Button} from "~components";
 import {Navigation} from "./navigation";
 import {SwitchLang} from "./switch-lang";
 import styles from "./header.module.css";
