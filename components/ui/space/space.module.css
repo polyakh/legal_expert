@@ -2,6 +2,13 @@
   display: flex;
 }
 
+.row {
+  flex-direction: row;
+}
+.column {
+  flex-direction: column;
+}
+
 .small {
   gap: var(--spacing-unit);
 }
@@ -11,5 +18,5 @@
 }
 
 .large {
-  gap: 1.5rem;
+  gap: calc(3 * var(--spacing-unit));
 }

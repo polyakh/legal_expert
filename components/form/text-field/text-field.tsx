@@ -30,6 +30,7 @@ function TextField({
                      placeholder,
                      disabled,
                      name,
+  required
 }: TextFieldOwnProps) {
   const computedStyles = getClassNames(styles.textField)
   const { onChange } = useFieldState({ value });

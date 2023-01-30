@@ -4,21 +4,29 @@ import type {PropsWithChildren} from "react";
 
 //region Local Imports
 import type {WithAsProps, Size} from "~shared/typings";
-import {sizeMedium} from "~components/consts";
+import {sizeMedium, getClassNames} from "~components";
 import styles from "./space.module.css";
 //endregion
 
-type SpaceOwnProps = WithAsProps & Partial<Size>;
+interface SpaceOwnProps extends WithAsProps, Partial<Size> {
+  readonly isDirectionColumn?: boolean;
+}
 
 const COMPONENT_KEY = "Space";
 
 function Space({
                  as: Component = "div",
                  size = sizeMedium,
+                 isDirectionColumn = false,
                  children,
                }: PropsWithChildren<SpaceOwnProps>) {
+  const computedClassName = getClassNames(
+    styles.space,
+    styles[size],
+    isDirectionColumn ? styles.column : styles.row
+  )
   return (
-    <Component className={`${styles.space} ${styles[size]}`}>
+    <Component className={computedClassName}>
       {children}
     </Component>
   );
