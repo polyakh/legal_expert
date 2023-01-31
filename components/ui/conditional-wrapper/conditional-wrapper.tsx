@@ -1,5 +1,5 @@
 //region Global Imports
-import {type PropsWithChildren, ReactNode} from "react";
+import {type PropsWithChildren, ReactNode, ReactElement} from "react";
 //endregion
 
 //region Local Imports
@@ -10,13 +10,13 @@ const COMPONENT_KEY = "ConditionalWrapper";
 
 function ConditionalWrapper({
                               children,
-                              condition,
+                              isCondition,
                               wrapper,
                             }: PropsWithChildren<{
-  readonly condition: boolean;
-  readonly wrapper: (children: ReactNode) => JSX.Element;
+  readonly isCondition: boolean;
+  readonly wrapper: (child: ReactNode) => ReactElement;
 }>) {
-  return condition ? wrapper(children) : children;
+  return isCondition ? wrapper(children) : <>{children}</>;
 }
 
 export {COMPONENT_KEY};
