@@ -8,13 +8,13 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'images.prismic.io',
-        port: '',
-        pathname: '/jameshome/**',
+        protocol: "https",
+        hostname: "images.prismic.io",
+        port: "",
+        pathname: "/jameshome/**",
       },
     ],
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;

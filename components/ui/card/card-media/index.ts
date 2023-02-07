@@ -1,1 +1,1 @@
-export {default as CardMedia} from "./card-media";
+export { default as CardMedia } from "./card-media";

@@ -1,9 +1,9 @@
 //region Local Imports
-import type {ServicesModel} from "~lib/services/types";
-import type {WithAsProps} from "~shared/typings";
+import type { ServicesModel } from "~lib/services/types";
+import type { WithAsProps } from "~shared/typings";
 import styles from "./services-list.module.css";
-import {Card, NavLink} from "~components/ui";
-import {PATH_SERVICES} from "~shared/consts";
+import { Card, NavLink } from "~components/ui";
+import { PATH_SERVICES } from "~shared/consts";
 
 //endregion
 const COMPONENT_KEY = "MainForm";
@@ -13,13 +13,9 @@ type ArrayElementType<T> = T extends (infer E)[] ? E : T;
 function MainForm({}) {
   const handelSubmitForm = async () => {
     // await api.
-  }
-  return (
-    <div className='max-w mx-auto'>
-
-    </div>
-  );
+  };
+  return <div className="max-w mx-auto"></div>;
 }
 
-export {COMPONENT_KEY};
+export { COMPONENT_KEY };
 export default MainForm;

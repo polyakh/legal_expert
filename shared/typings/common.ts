@@ -1,7 +1,6 @@
-import {profiles} from "~shared/consts";
+import { profiles } from "~shared/consts";
 
 export type ProfilesKeys = keyof typeof profiles;
-
 
 export interface Slug {
   readonly slug: string;

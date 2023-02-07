@@ -1,6 +1,6 @@
 // @ts-check
-import {locales, defaultLocal} from "./consts";
-import {isDevelopmentENV} from "./utilities";
+import { locales, defaultLocal } from "./consts";
+import { isDevelopmentENV } from "./utilities";
 
 /**
  * @type {import('next-i18next').UserConfig}
@@ -11,7 +11,6 @@ export const i18n = {
   i18n: {
     defaultLocale: defaultLocal,
     locales: locales,
-
   },
   /** To avoid issues when deploying to some paas (vercel...) */
   localePath:

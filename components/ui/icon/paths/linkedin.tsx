@@ -1,4 +1,4 @@
-import type {Path} from "~components/ui/icon/types";
+import type { Path } from "~components/ui/icon/types";
 
 const Linkedin: Path = {
   path: {

@@ -1,1 +1,1 @@
-export {default as ConditionalWrapper} from "./conditional-wrapper";
+export { default as ConditionalWrapper } from "./conditional-wrapper";

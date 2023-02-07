@@ -1,35 +1,42 @@
 //region Global Imports
-import {ReactNode} from "react";
-import type {ImageProps} from "next/image";
+import { ReactNode } from "react";
+import type { ImageProps } from "next/image";
 //endregion
 
 //region Local Imports
-import type {WithAsProps, Title, Description} from "~shared/typings";
-import {CardMedia} from "./card-media";
-import {CardMeta} from "./card-meta";
+import type { WithAsProps, Title, Description } from "~shared/typings";
+import { CardMedia } from "./card-media";
+import { CardMeta } from "./card-meta";
 import styles from "./card.module.css";
 
 //endregion
 
-
-export interface CardCommonProps extends Title, Description, Pick<ImageProps, 'src'> {
-}
+export interface CardCommonProps
+  extends Title,
+    Description,
+    Pick<ImageProps, "src"> {}
 
 interface CardOwnProps extends WithAsProps, CardCommonProps {
-  readonly actions?: Array<ReactNode>
+  readonly actions?: Array<ReactNode>;
 }
 
 const COMPONENT_KEY = "Card";
 
-function Card({as: Component = "div", title, description, src, actions}: CardOwnProps) {
+function Card({
+  as: Component = "div",
+  title,
+  description,
+  src,
+  actions,
+}: CardOwnProps) {
   return (
     <Component className={styles.card}>
-      <CardMedia src={src} alt={title}/>
-      <CardMeta title={title} description={description}/>
+      <CardMedia src={src} alt={title} />
+      <CardMeta title={title} description={description} />
       {actions}
     </Component>
   );
 }
 
-export {COMPONENT_KEY};
+export { COMPONENT_KEY };
 export default Card;

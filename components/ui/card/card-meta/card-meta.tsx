@@ -1,27 +1,37 @@
 //region Global Imports
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 //endregion
 
 //region Local Imports
-import type {WithAsProps, Description, Title, HasComponentToShow} from "~shared/typings";
+import type {
+  WithAsProps,
+  Description,
+  Title,
+  HasComponentToShow,
+} from "~shared/typings";
 import styles from "./card-meta.module.css";
 //endregion
 
-
-interface CardMetaOwnProps extends WithAsProps, Description, Title, HasComponentToShow {}
+interface CardMetaOwnProps
+  extends WithAsProps,
+    Description,
+    Title,
+    HasComponentToShow {}
 
 const COMPONENT_KEY = "CardMeta";
 
 function CardMeta({
-                    as: Component = "div",
-                    title,
-                    description,
-                    hasComponentToShow = true,
-                  }: CardMetaOwnProps) {
+  as: Component = "div",
+  title,
+  description,
+  hasComponentToShow = true,
+}: CardMetaOwnProps) {
   let divider = null;
-  if(hasComponentToShow) {
-    const DynamicDivider = dynamic(() => import('~components/ui/divider/divider'))
-    divider = <DynamicDivider />
+  if (hasComponentToShow) {
+    const DynamicDivider = dynamic(
+      () => import("~components/ui/divider/divider")
+    );
+    divider = <DynamicDivider />;
   }
   return (
     <Component className={styles.cardMeta}>
@@ -32,5 +42,5 @@ function CardMeta({
   );
 }
 
-export {COMPONENT_KEY};
+export { COMPONENT_KEY };
 export default CardMeta;

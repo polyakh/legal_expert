@@ -1,7 +1,7 @@
 //region Local Imports
-import type {WithAsProps} from "~shared/typings";
+import type { WithAsProps } from "~shared/typings";
 import styles from "./footer.module.css";
-import {Copyright} from './copyright'
+import { Copyright } from "./copyright";
 //endregion
 
 type FooterOwnProps = WithAsProps;
@@ -10,18 +10,18 @@ const COMPONENT_KEY = "Footer";
 
 const currentYear = new Date().getFullYear();
 
-function Footer({as: Component = "footer"}: FooterOwnProps) {
+function Footer({ as: Component = "footer" }: FooterOwnProps) {
   return (
     <Component className={styles.footer}>
       <div className="max-w mx-auto">
         <div className={styles.footer__inner}>
-          <Copyright/>
+          <Copyright />
         </div>
       </div>
     </Component>
   );
 }
 
-export {COMPONENT_KEY};
-export type {FooterOwnProps};
+export { COMPONENT_KEY };
+export type { FooterOwnProps };
 export default Footer;

@@ -1,32 +1,30 @@
 //region Global Imports
-import {useTranslation} from "next-i18next";
+import { useTranslation } from "next-i18next";
 //endregion
 
 //region Local Imports
-import type {WithAsProps} from "~shared/typings";
-import {useToggle} from "~pages/layout/header/use-toggle";
+import type { WithAsProps } from "~shared/typings";
+import { useToggle } from "~pages/layout/header/use-toggle";
 
-import {locales} from "/consts";
+import { locales } from "/consts";
 import styles from "./switch-lang.module.css";
 
 //endregion
 
-interface SwitchLangOwnProps extends WithAsProps {
-}
+interface SwitchLangOwnProps extends WithAsProps {}
 
 const COMPONENT_KEY = "SwitchLang";
 
-function SwitchLang({as: Component = "div"}: SwitchLangOwnProps) {
+function SwitchLang({ as: Component = "div" }: SwitchLangOwnProps) {
   const [isLangChanged, setIsLangChanged] = useToggle();
-  const {i18n} = useTranslation();
+  const { i18n } = useTranslation();
 
-
-  const [uk, pl] = locales
+  const [uk, pl] = locales;
   let currentLang = isLangChanged ? uk : pl;
   const handelChangeLanguage = (lang: string) => {
-    i18n.changeLanguage('uk');
+    i18n.changeLanguage("uk");
     setIsLangChanged();
-  }
+  };
 
   return (
     <Component className={styles.switchLang} onClick={handelChangeLanguage}>
@@ -35,6 +33,6 @@ function SwitchLang({as: Component = "div"}: SwitchLangOwnProps) {
   );
 }
 
-export {COMPONENT_KEY};
-export type {SwitchLangOwnProps};
+export { COMPONENT_KEY };
+export type { SwitchLangOwnProps };
 export default SwitchLang;

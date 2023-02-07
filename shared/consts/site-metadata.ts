@@ -24,6 +24,6 @@ export const siteMetadata = {
     website: "",
     address: "",
     phone: "",
-    profiles: {...profiles},
+    profiles: { ...profiles },
   },
 };

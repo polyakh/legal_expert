@@ -3,9 +3,8 @@ import HeadNext from "next/head";
 //endregion
 
 //region Local Imports
-import {appName} from "~shared/consts";
+import { appName } from "~shared/consts";
 //endregion
-
 
 const COMPONENT_KEY = "Head";
 
@@ -17,5 +16,5 @@ function Head() {
   );
 }
 
-export {COMPONENT_KEY};
+export { COMPONENT_KEY };
 export default Head;

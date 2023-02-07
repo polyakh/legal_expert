@@ -1,6 +1,6 @@
-import type {ElementType} from "react";
+import type { ElementType } from "react";
 
-import {SizeTypes} from "~components/consts";
+import { SizeTypes } from "~components/consts";
 
 export interface ClassName {
   readonly className: string;
@@ -31,4 +31,3 @@ export interface Description {
 export interface HasComponentToShow {
   readonly hasComponentToShow?: boolean;
 }
-

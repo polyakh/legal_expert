@@ -1,11 +1,10 @@
 //region Global Imports
-import type {NextApiRequest, NextApiResponse} from 'next';
+import type { NextApiRequest, NextApiResponse } from "next";
 //endregion
 
-
 //region Local Imports
-import {ServicesModel} from '~lib/services/types';
-import mockServices from '~lib/services/mock-services.json';
+import { ServicesModel } from "~lib/services/types";
+import mockServices from "~lib/services/mock-services.json";
 
 //endregion
 
@@ -14,10 +13,10 @@ interface ApiServicesRequest extends NextApiRequest {
 }
 
 export default function handler(
-  {method, body: {id: serviceId}}: ApiServicesRequest,
+  { method, body: { id: serviceId } }: ApiServicesRequest,
   res: NextApiResponse<ServicesModel>
 ) {
-  if (method === 'GET') {
+  if (method === "GET") {
     // const findResults = mockServices.find((service) => service.id === serviceId);
     res.status(200).json(mockServices);
   } else {

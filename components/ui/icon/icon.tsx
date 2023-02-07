@@ -1,14 +1,14 @@
 //region Global Imports
-import {isValidElement, type ReactNode} from "react";
+import { isValidElement, type ReactNode } from "react";
 //endregion
 
 //region Local Imports
-import type {ProfilesKeys} from "~shared/typings";
-import type {Size} from "~shared/typings";
-import {sizeMedium} from "~components/consts";
+import type { ProfilesKeys } from "~shared/typings";
+import type { Size } from "~shared/typings";
+import { sizeMedium } from "~components/consts";
 import styles from "./icon.module.css";
 import * as icons from "./paths";
-import {parseElementProps} from "./utilities";
+import { parseElementProps } from "./utilities";
 //endregion
 
 const COMPONENT_KEY = "Icon";
@@ -23,12 +23,15 @@ export interface IconOwnProps extends Partial<Size>, Partial<CommonProps> {
   readonly name: ProfilesKeys;
 }
 
-const SVGElement = ({path, ...restProps}: ReturnType<typeof parseElementProps>) => {
-  return <svg {...restProps}>{path}</svg>
-}
+const SVGElement = ({
+  path,
+  ...restProps
+}: ReturnType<typeof parseElementProps>) => {
+  return <svg {...restProps}>{path}</svg>;
+};
 
-function Icon({name, size = sizeMedium}: IconOwnProps) {
-  const {path, viewBox} = icons[name as ProfilesKeys];
+function Icon({ name, size = sizeMedium }: IconOwnProps) {
+  const { path, viewBox } = icons[name as ProfilesKeys];
 
   if (!isValidElement(path[size])) {
     return null;
@@ -45,5 +48,5 @@ function Icon({name, size = sizeMedium}: IconOwnProps) {
   return <SVGElement {...iconProps} />;
 }
 
-export {COMPONENT_KEY};
+export { COMPONENT_KEY };
 export default Icon;

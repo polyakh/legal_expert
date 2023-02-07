@@ -1,24 +1,22 @@
 //region Global Imports
-import Image, {type ImageProps} from 'next/image'
+import Image, { type ImageProps } from "next/image";
 //endregion
 
 //region Local Imports
-import type {WithAsProps} from "~shared/typings";
+import type { WithAsProps } from "~shared/typings";
 import styles from "./card-media.module.css";
 
 //endregion
 
-
-interface CardMediaOwnProps extends WithAsProps, ImageProps {
-}
+interface CardMediaOwnProps extends WithAsProps, ImageProps {}
 
 const COMPONENT_KEY = "CardMedia";
 
 function CardMedia({
-                     as: Component = "div",
-                     src,
-                     alt = 'default alt',
-                   }: CardMediaOwnProps) {
+  as: Component = "div",
+  src,
+  alt = "default alt",
+}: CardMediaOwnProps) {
   return (
     <Component className={styles.cardMedia}>
       <Image
@@ -32,5 +30,5 @@ function CardMedia({
   );
 }
 
-export {COMPONENT_KEY};
+export { COMPONENT_KEY };
 export default CardMedia;

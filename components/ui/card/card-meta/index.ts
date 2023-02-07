@@ -1,1 +1,1 @@
-export {default as CardMeta} from "./card-meta";
+export { default as CardMeta } from "./card-meta";

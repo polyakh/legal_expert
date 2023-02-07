@@ -1,5 +1,5 @@
-import type {ReactElement} from "react";
-import type {SizeType} from "~shared/typings";
+import type { ReactElement } from "react";
+import type { SizeType } from "~shared/typings";
 
 export type Path = {
   readonly path: Record<SizeType, ReactElement>;
@@ -7,5 +7,5 @@ export type Path = {
 };
 
 export interface ViewBox {
-  readonly viewBox: string
+  readonly viewBox: string;
 }

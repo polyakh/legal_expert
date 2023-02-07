@@ -1,1 +1,1 @@
-export {default as ServicesList} from './main-form';
+export { default as ServicesList } from "./main-form";

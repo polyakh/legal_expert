@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
@@ -24,34 +20,16 @@
     "baseUrl": ".",
     "paths": {
       // back end directory
-      "~lib": [
-        "lib"
-      ],
-      "~lib/*": [
-        "lib/*"
-      ],
+      "~lib": ["lib"],
+      "~lib/*": ["lib/*"],
       // front end directories
-      "~pages/*": [
-        "pages/*"
-      ],
-      "~components": [
-        "components"
-      ],
-      "~components/*": [
-        "components/*"
-      ],
-      "~shared": [
-        "shared"
-      ],
-      "~shared/*": [
-        "shared/*"
-      ],
-      "~styles": [
-        "styles"
-      ],
-      "~styles/*": [
-        "styles/*"
-      ],
+      "~pages/*": ["pages/*"],
+      "~components": ["components"],
+      "~components/*": ["components/*"],
+      "~shared": ["shared"],
+      "~shared/*": ["shared/*"],
+      "~styles": ["styles"],
+      "~styles/*": ["styles/*"]
     },
     "plugins": [
       {
@@ -59,15 +37,6 @@
       }
     ]
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    ".next",
-    "node_modules",
-    "next.config.js"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": [".next", "node_modules", "next.config.js"]
 }

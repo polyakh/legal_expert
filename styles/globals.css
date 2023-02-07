@@ -12,7 +12,6 @@
   --color-background: hsl(0deg, 0%, 50%);
   --spacing-unit: 0.5rem;
 
-
   --color-gray-200: hsl(210deg, 15%, 25%);
   --color-gray-600: hsl(210deg, 12%, 55%);
   --color-gray-1000: hsl(210deg, 25%, 96%);
@@ -33,11 +32,9 @@
 
   --opacity: 0.8;
 
-
   --font-weight-bold: 600;
   --font-weight-medium: 500;
   --font-weight-light: 400;
-
 }
 
 .max-w {
