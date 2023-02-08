@@ -1,5 +1,6 @@
 The app is powered by [Next.js](https://nextjs.org/)
 
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 ## Features
 
 - ⚡ Next.js 13

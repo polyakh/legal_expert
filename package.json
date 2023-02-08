@@ -8,14 +8,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --check . --ignore-path .gitignore",
-    "format:fix": "prettier --write . --ignore-path .gitignore",
-    "prepare": "husky install"
+    "format:fix": "prettier --write . --ignore-path .gitignore"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "prettier --write . && git add -A ."
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.{js|ts}": "pnpm format:fix"
   },
   "dependencies": {
     "@next/font": "13.0.7",
@@ -33,7 +34,14 @@
     "typescript": "4.9.4"
   },
   "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0",
     "husky": "8.0.3",
+    "lint-staged": "13.1.1",
     "prettier": "2.8.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
