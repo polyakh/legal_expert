@@ -5,7 +5,7 @@ import type { PropsWithChildren } from "react";
 //region Local Imports
 import type { WithAsProps, Size } from "~shared/typings";
 import { sizeMedium, getClassNames } from "~components";
-import styles from "./space.module.css";
+import { styles } from "~components/ui/space";
 //endregion
 
 interface SpaceOwnProps extends WithAsProps, Partial<Size> {

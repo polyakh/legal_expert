@@ -4,7 +4,7 @@ import { type PropsWithChildren } from "react";
 
 // region Local Imports
 import type { WithAsProps } from "~shared/typings";
-import styles from "./divider.module.css";
+import { styles } from "~components/ui/divider";
 // endregion
 
 const COMPONENT_KEY = "Divider";

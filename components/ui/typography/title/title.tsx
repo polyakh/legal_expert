@@ -4,9 +4,8 @@ import type { PropsWithChildren } from "react";
 
 // region Local Imports
 import type { WithAsProps } from "~shared/typings";
-import { TitleLVLTypes, LVL1 } from "./consts";
+import { TitleLVLTypes, LVL1, styles } from "~components/ui/typography/title";
 import { getClassNames } from "~components/utilities";
-import styles from "./title.module.css";
 // endregion
 
 const COMPONENT_KEY = "Title";

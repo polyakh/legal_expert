@@ -5,10 +5,7 @@ import type { ImageProps } from "next/image";
 
 //region Local Imports
 import type { WithAsProps, Title, Description } from "~shared/typings";
-import { CardMedia } from "./card-media";
-import { CardMeta } from "./card-meta";
-import styles from "./card.module.css";
-
+import { CardMedia, CardMeta, styles } from "~components/ui/card";
 //endregion
 
 export interface CardCommonProps

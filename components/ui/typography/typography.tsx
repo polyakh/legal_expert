@@ -5,7 +5,7 @@ import { type PropsWithChildren } from "react";
 // region Local Imports
 import type { WithAsProps } from "~shared/typings";
 import { getClassNames } from "~components/utilities";
-import styles from "./typography.module.css";
+import { styles } from "~components/ui/typography";
 // endregion
 
 const COMPONENT_KEY = "Typography";

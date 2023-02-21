@@ -6,9 +6,7 @@ import { isValidElement, type ReactNode } from "react";
 import type { ProfilesKeys } from "~shared/typings";
 import type { Size } from "~shared/typings";
 import { sizeMedium } from "~components/consts";
-import styles from "./icon.module.css";
-import * as icons from "./paths";
-import { parseElementProps } from "./utilities";
+import { icons, parseElementProps, styles } from "~components/ui/icon";
 //endregion
 
 const COMPONENT_KEY = "Icon";

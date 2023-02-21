@@ -8,11 +8,8 @@ import {
 
 //region Local Imports
 import type { WithAsProps, Size } from "~shared/typings";
-import { getClassNames, ConditionalWrapper } from "~components";
-import { useFieldState } from "./use-field-state";
+import { getClassNames, ConditionalWrapper, useFieldState, inputTypeText, type InputTypes } from "~components";
 import styles from "./text-field.module.css";
-import { inputTypeText, type InputTypes } from "./consts";
-
 //endregion
 
 type TextFieldAttributes = Omit<

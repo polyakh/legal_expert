@@ -3,25 +3,24 @@ import type { ComponentPropsWithoutRef, ReactNode } from "react";
 // endregion
 
 // region Local Imports
+import type { WithAsProps, Size } from "~shared/typings";
+import { getClassNames, sizeMedium } from "~components";
 import {
   defaultButtonType,
   ShapeTypes,
   shapeDefault,
   VariantTypes,
   variantPrimary,
-} from "./consts";
-import type { WithAsProps, Size } from "~shared/typings";
-import { getClassNames } from "~components/utilities";
-import { sizeMedium } from "~components/consts";
-import styles from "./button.module.css";
+  styles
+} from "~components/ui/button";
 // endregion
 
 const COMPONENT_KEY = "Button";
 
 export interface ButtonOwnProps
   extends WithAsProps,
-    Partial<Size>,
-    ComponentPropsWithoutRef<typeof defaultButtonType> {
+  Partial<Size>,
+  ComponentPropsWithoutRef<typeof defaultButtonType> {
   readonly shape?: typeof ShapeTypes[number];
   readonly icon?: ReactNode;
 
