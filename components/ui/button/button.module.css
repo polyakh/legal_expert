@@ -1,4 +1,4 @@
-.button {
+.root {
   all: unset;
 
   display: inline-flex;
@@ -6,18 +6,32 @@
   justify-content: center;
 
   padding: 0 calc(4 * var(--spacing-unit));
-
+  outline: none;
   overflow: hidden;
   cursor: pointer;
-
-  transition: var(--transition-duration) all var(--transition-timing-function);
+  transition: var(--transition-property-common) var(--transition-duration) var(--transition-timing-function);
 }
 
 .primary {
-  background-color: hsl(217, 100%, 75%);
+  background-color: var(--color-secondary);
+}
+
+
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+.ripple:hover {
+  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+.ripple:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
 }
 
 .primary:hover {
+  background-color: hsl(217, 100%, 75%);
 }
 
 .secondary {

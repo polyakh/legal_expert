@@ -9,6 +9,8 @@
   --color-text: hsl(0deg, 0%, 100%);
   --color-primary: hsl(221, 100%, 27%);
 
+  --color-secondary: hsl(217, 100%, 65%);
+
   --color-background: hsl(0deg, 0%, 50%);
   --spacing-unit: 0.5rem;
 
@@ -27,7 +29,8 @@
   --z-index-modal: 2;
   --z-index-cookies-banner: calc(var(--z-index-modal) + 1);
 
-  --transition-duration: 0.1s;
+  --transition-duration: 200ms;
+  --transition-property-common: background-color;
   --transition-timing-function: ease;
 
   --opacity: 0.8;

@@ -1,8 +1,15 @@
+import { z } from "zod";
 //region Local Imports
 import { TextField, Form, InputTypes, Button, Space } from "~components";
 //endregion
 
 const COMPONENT_KEY = "ContactsForm";
+
+const formSchema = z.object({
+  email: z.string().email('Email is not correct'),
+  userName: z.string().min(5).max(25),
+}).required();
+type User = z.infer<typeof formSchema>;
 
 function ContactsForm({}) {
   const handleFormSubmit = () => {};
@@ -14,10 +21,10 @@ function ContactsForm({}) {
             aria-describedby={type}
             key={type}
             placeholder={`Enter a ${type}`}
-            required
+            type={type}
           />
         ))}
-        <Button>Submit</Button>
+        <Button type="submit">Submit</Button>
       </Space>
     </Form>
   );

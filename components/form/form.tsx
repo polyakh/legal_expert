@@ -4,7 +4,10 @@ import {
   type FormEventHandler,
   forwardRef,
   useCallback,
+  Children,
+  useState,
 } from "react";
+import z from 'zod';
 //endregion
 
 //region Local Imports
@@ -24,6 +27,8 @@ const Form = forwardRef<HTMLFormElement, FormOwnProps>(function Form(
   { as: Component = "form", isPreventDefault = false, onSubmit, children },
   ref
 ) {
+  const [errors, setErrors] = useState<z.ZodFormattedError<any>>({_errors: []});
+  console.log('@', Children.toArray(children))
   const handleOnSubmitForm = useCallback<FormEventHandler<HTMLFormElement>>(
     (event) => {
       if (!isPreventDefault) {
@@ -31,6 +36,8 @@ const Form = forwardRef<HTMLFormElement, FormOwnProps>(function Form(
       }
 
       if (onSubmit) {
+        const form = new FormData(event.currentTarget);
+        const formData = Object.fromEntries(form.entries());
         onSubmit(event);
       }
     },

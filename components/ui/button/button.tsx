@@ -39,10 +39,11 @@ const Button = ({
   icon,
 }: ButtonOwnProps) => {
   const computedClassName = getClassNames(
-    styles.button,
+    styles.root,
+    styles[variant],
     styles[shape],
     styles[size],
-    styles[variant]
+    styles.ripple
   );
   return (
     <Component
