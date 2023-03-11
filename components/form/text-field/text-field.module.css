@@ -2,7 +2,8 @@
   width: 100%;
   border-width: var(--border-width);
   border-style: var(--border-style);
-  transition: all var(--transition-duration);
+  transition: border-color var(--transition-duration) ease-in-out,
+    box-shadow var(--transition-duration) ease-in-out;
 }
 
 .small {

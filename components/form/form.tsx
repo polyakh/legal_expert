@@ -7,7 +7,7 @@ import {
   Children,
   useState,
 } from "react";
-import z from 'zod';
+import z from "zod";
 //endregion
 
 //region Local Imports
@@ -27,8 +27,9 @@ const Form = forwardRef<HTMLFormElement, FormOwnProps>(function Form(
   { as: Component = "form", isPreventDefault = false, onSubmit, children },
   ref
 ) {
-  const [errors, setErrors] = useState<z.ZodFormattedError<any>>({_errors: []});
-  console.log('@', Children.toArray(children))
+  const [errors, setErrors] = useState<z.ZodFormattedError<any>>({
+    _errors: [],
+  });
   const handleOnSubmitForm = useCallback<FormEventHandler<HTMLFormElement>>(
     (event) => {
       if (!isPreventDefault) {

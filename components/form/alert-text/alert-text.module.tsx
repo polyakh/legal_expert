@@ -1,7 +1,5 @@
 //region Global Imports
-import {
-  type PropsWithChildren,
-} from "react";
+import { type PropsWithChildren } from "react";
 //endregion
 
 //region Local Imports
@@ -11,11 +9,12 @@ import styles from "./alert-text.module.css";
 
 const COMPONENT_KEY = "AlertText";
 
-function AlertText({ as: Component = "span", children }: PropsWithChildren<WithAsProps>) {
+function AlertText({
+  as: Component = "span",
+  children,
+}: PropsWithChildren<WithAsProps>) {
   return Boolean(children) ? (
-    <Component role="alert">
-      {children}
-    </Component>
+    <Component role="alert">{children}</Component>
   ) : null;
 }
 

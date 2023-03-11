@@ -1,8 +1,11 @@
 /*https://www.joshwcomeau.com/css/custom-css-reset/#introduction*/
 
 :root {
+  --border-radius-small: 0.2rem;
+  --border-radius-medium: 0.4rem;
+  --border-radius-large: 0.6rem;
+
   --max-width: 80rem;
-  --border-radius: 0.5rem;
   --border-width: 0.063rem;
   --border-style: solid;
 
@@ -118,4 +121,13 @@ ul {
 
 li {
   list-style-type: none;
+}
+
+input {
+  border-radius: var(--border-radius-small);
+}
+input:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0.1rem var(--color-secondary);
 }

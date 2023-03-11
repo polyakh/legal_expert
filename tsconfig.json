@@ -3,6 +3,8 @@
     "target": "es6",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "strict": true,
@@ -11,12 +13,11 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
+    "incremental": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
-    "sourceMap": true,
     "baseUrl": ".",
     "paths": {
       // back end directory
@@ -24,6 +25,7 @@
       "~lib/*": ["lib/*"],
       // front end directories
       "~pages/*": ["pages/*"],
+      "~public/*": ["public/*"],
       "~components": ["components"],
       "~components/*": ["components/*"],
       "~shared": ["shared"],

@@ -1,14 +1,16 @@
 //region Global Imports
-import {
-  type InputHTMLAttributes,
-  type HTMLInputTypeAttribute,
-  useId,
-} from "react";
+import { type InputHTMLAttributes, useId } from "react";
 //endregion
 
 //region Local Imports
 import type { WithAsProps, Size } from "~shared/typings";
-import { getClassNames, ConditionalWrapper, useFieldState, inputTypeText, type InputTypes } from "~components";
+import {
+  getClassNames,
+  ConditionalWrapper,
+  useFieldState,
+  inputTypeText,
+  type InputTypes,
+} from "~components";
 import styles from "./text-field.module.css";
 //endregion
 
@@ -37,10 +39,11 @@ function TextField({
 }: TextFieldOwnProps) {
   const computedStyles = getClassNames(styles.textField);
   const { onChange } = useFieldState({ value });
+  const id = useId();
 
   const instanceTextField = (
     <Component
-      id={type}
+      id={id}
       type={type}
       disabled={disabled}
       placeholder={placeholder}

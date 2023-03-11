@@ -5,10 +5,12 @@ import { TextField, Form, InputTypes, Button, Space } from "~components";
 
 const COMPONENT_KEY = "ContactsForm";
 
-const formSchema = z.object({
-  email: z.string().email('Email is not correct'),
-  userName: z.string().min(5).max(25),
-}).required();
+const formSchema = z
+  .object({
+    email: z.string().email("Email is not correct"),
+    userName: z.string().min(5).max(25),
+  })
+  .required();
 type User = z.infer<typeof formSchema>;
 
 function ContactsForm({}) {

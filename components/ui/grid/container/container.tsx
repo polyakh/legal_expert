@@ -7,15 +7,13 @@ import type { WithAsProps } from "~shared/typings";
 import styles from "./container.module.scss";
 //endregion
 
-
 const COMPONENT_KEY = "Container";
 
-function Container({as: Component = "div", children}: PropsWithChildren<WithAsProps>) {
-  return (
-    <Component className={styles.container}>
-      {children}
-    </Component>
-  );
+function Container({
+  as: Component = "div",
+  children,
+}: PropsWithChildren<WithAsProps>) {
+  return <Component className={styles.container}>{children}</Component>;
 }
 
 export { COMPONENT_KEY };

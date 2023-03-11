@@ -11,7 +11,7 @@ import {
   shapeDefault,
   VariantTypes,
   variantPrimary,
-  styles
+  styles,
 } from "~components/ui/button";
 // endregion
 
@@ -19,8 +19,8 @@ const COMPONENT_KEY = "Button";
 
 export interface ButtonOwnProps
   extends WithAsProps,
-  Partial<Size>,
-  ComponentPropsWithoutRef<typeof defaultButtonType> {
+    Partial<Size>,
+    ComponentPropsWithoutRef<typeof defaultButtonType> {
   readonly shape?: typeof ShapeTypes[number];
   readonly icon?: ReactNode;
 
