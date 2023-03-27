@@ -3,6 +3,6 @@
 }
 
 .footer__inner {
-  padding-top: calc(2 * var(--spacing-unit));
-  padding-bottom: calc(2 * var(--spacing-unit));
+  padding-top: calc(2 * var(--spacing-sm));
+  padding-bottom: calc(2 * var(--spacing-sm));
 }

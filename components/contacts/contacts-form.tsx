@@ -1,6 +1,6 @@
 import { z } from "zod";
 //region Local Imports
-import { TextField, Form, InputTypes, Button, Space } from "~components";
+import { TextField, Form, InputTypes, Button, Space, Checkbox } from "~components";
 //endregion
 
 const COMPONENT_KEY = "ContactsForm";
@@ -11,21 +11,24 @@ const formSchema = z
     userName: z.string().min(5).max(25),
   })
   .required();
-type User = z.infer<typeof formSchema>;
 
 function ContactsForm({}) {
   const handleFormSubmit = () => {};
   return (
     <Form onSubmit={handleFormSubmit}>
       <Space isDirectionColumn>
-        {InputTypes.map((type) => (
+        {
+        InputTypes.map((type) => (
           <TextField
             aria-describedby={type}
             key={type}
             placeholder={`Enter a ${type}`}
             type={type}
           />
-        ))}
+        ))
+
+        }
+        <Checkbox />
         <Button type="submit">Submit</Button>
       </Space>
     </Form>

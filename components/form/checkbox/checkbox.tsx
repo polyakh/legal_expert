@@ -1,46 +1,46 @@
 //region Global Imports
-import { type InputHTMLAttributes, useId, useState } from "react";
+import { type InputHTMLAttributes, useId, useState, PropsWithChildren, type ChangeEvent } from "react";
 //endregion
 
 //region Local Imports
 import type { WithAsProps } from "~shared/typings";
-import { getClassNames, inputCheckbox, type InputTypes } from "~components";
+import { getClassNames, inputCheckbox } from "~components";
+import styles from "./checkbox.module.css";
 //endregion
 
 type CheckboxAttributes = Omit<
   InputHTMLAttributes<HTMLInputElement>,
-  "type" | "checked" | "onChange"
+  "checked" | "onChange"
 >;
-interface CheckboxOwnProps extends WithAsProps, CheckboxAttributes {
-  // AllowInputType
-  readonly type?: typeof InputTypes[number];
-}
+type CheckboxOwnProps  = WithAsProps & CheckboxAttributes;
 
 const COMPONENT_KEY = "Checkbox";
 
 function Checkbox({
   as: Component = "input",
   type = inputCheckbox,
-  defaultChecked = false,
-}: CheckboxOwnProps) {
+  children = 'Label'
+}: PropsWithChildren<CheckboxOwnProps>) {
   const [isChecked, setIsChecked] = useState(false);
   const id = useId();
-  const computedStyles = getClassNames(styles.textField);
+  const computedStyles = getClassNames(styles.checkbox);
   const handleCheckboxChange = (
-    event: React.ChangeEvent<HTMLInputElement>
+    event: ChangeEvent<HTMLInputElement>
   ): void => {
     const newCheckedValue = event.target.checked;
     setIsChecked(newCheckedValue);
   };
   return (
-    <Component
-      id={id}
-      type={type}
-      checked={isChecked}
-      defaultChecked={defaultChecked}
-      className={computedStyles}
-      onChange={handleCheckboxChange}
-    />
+    <label htmlFor={id} className={styles.label}>
+      <Component
+        id={id}
+        type={type}
+        checked={isChecked}
+        className={computedStyles}
+        onChange={handleCheckboxChange}
+      />
+      <span className={styles.child}>{children}</span>
+    </label>
   );
 }
 

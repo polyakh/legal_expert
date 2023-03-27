@@ -1,0 +1,7 @@
+.label {
+  cursor: pointer;
+}
+.child {
+  padding-left: var(--padding-x);
+  padding-right: var(--padding-x);
+}

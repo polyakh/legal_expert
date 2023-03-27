@@ -10,13 +10,13 @@
 }
 
 .small {
-  gap: var(--spacing-unit);
+  gap: var(--spacing-sm);
 }
 
 .medium {
-  gap: calc(2 * var(--spacing-unit));
+  gap: calc(2 * var(--spacing-sm));
 }
 
 .large {
-  gap: calc(3 * var(--spacing-unit));
+  gap: calc(3 * var(--spacing-sm));
 }

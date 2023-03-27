@@ -7,3 +7,4 @@ export * from "./button";
 export * from "./divider";
 export * from "./typography";
 export * from "./conditional-wrapper";
+export * from "./grid";

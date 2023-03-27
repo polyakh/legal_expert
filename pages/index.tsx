@@ -16,15 +16,24 @@ function IndexPage() {
     <>
       <Head />
 
-      <Image height={600} width={600} src="/test.jpg" alt="I" />
+      <div className={styles.gridContainer}>
+        <div className={styles.imageContainer}>
+          <Image fill src="/test.jpg" alt="I" />
+        </div>
+        <div>
+        <h2>Le</h2>
+        <p>
+          Lollipop123 is an independent magazine that celebrates the writing of
+          teens. We publish original work about the exciting and sometimes
+          unpleasant phases of childhood. Originally created in 2015, the magazine
+          collects stories, essays, and interviews about growing up.{" "}
+        </p>
+      </div>
+      </div>
 
-      <h2>Le</h2>
-      <p>
-        Lollipop123 is an independent magazine that celebrates the writing of
-        teens. We publish original work about the exciting and sometimes
-        unpleasant phases of childhood. Originally created in 2015, the magazine
-        collects stories, essays, and interviews about growing up.{" "}
-      </p>
+   
+     
+
     </>
   );
 }

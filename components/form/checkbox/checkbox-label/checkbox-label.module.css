@@ -1,0 +1,6 @@
+.checkboxLabelLeft {
+    margin-left: var(--spacing-sm);
+}
+.checkboxLabelRight {
+    margin-right: var(--spacing-sm);
+}

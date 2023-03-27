@@ -15,7 +15,6 @@
   --color-secondary: hsl(217, 100%, 65%);
 
   --color-background: hsl(0deg, 0%, 50%);
-  --spacing-unit: 0.5rem;
 
   --color-gray-200: hsl(210deg, 15%, 25%);
   --color-gray-600: hsl(210deg, 12%, 55%);
@@ -41,12 +40,35 @@
   --font-weight-bold: 600;
   --font-weight-medium: 500;
   --font-weight-light: 400;
+
+
+  /* It had made by ChatGPT */
+
+  /* Spacing */
+  --spacing-xxs: 0.125rem; /* Extra Extra Small */
+  --spacing-xs: 0.25rem; /* Extra Small */
+  --spacing-sm: 0.5rem; /* Small */
+  --spacing-md: 1rem; /* Medium */
+  --spacing-lg: 1.5rem; /* Large */
+  --spacing-xl: 2rem; /* Extra Large */
+  --spacing-xxl: 3rem; /* Extra Extra Large */
+
+  /* Padding */
+  --padding-x: var(--spacing-sm); /* Horizontal padding */
+  --padding-y: var(--spacing-sm); /* Vertical padding */
+  --padding: var(--padding-y) var(--padding-x); /* All padding */
+
+  /* Margin */
+  --margin-x: var(--spacing-sm); /* Horizontal margin */
+  --margin-y: var(--spacing-sm); /* Vertical margin */
+  --margin: var(--margin-y) var(--margin-x); /* All margin */
+
 }
 
 .max-w {
   max-width: var(--max-width);
-  padding-left: calc(2 * var(--spacing-unit));
-  padding-right: calc(2 * var(--spacing-unit));
+  padding-left: calc(2 * var(--spacing-sm));
+  padding-right: calc(2 * var(--spacing-sm));
 }
 
 .mx-auto {

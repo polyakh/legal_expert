@@ -5,5 +5,4 @@ export const inputCheckbox = "checkbox";
 export const InputTypes = [
   inputTypeEmail,
   inputTypeText,
-  inputCheckbox,
 ] as const;

@@ -4,7 +4,7 @@ import { type PropsWithChildren } from "react";
 
 //region Local Imports
 import type { WithAsProps } from "~shared/typings";
-import styles from "./container.module.css";
+import styles from "./container.module.scss";
 //endregion
 
 const COMPONENT_KEY = "Container";

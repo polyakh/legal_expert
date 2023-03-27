@@ -1,7 +1,7 @@
-.container_ {
+.container {
   max-width: var(--max-width);
-  padding-left: calc(2 * var(--spacing-unit));
-  padding-right: calc(2 * var(--spacing-unit));
+  padding-left: calc(2 * var(--spacing-sm));
+  padding-right: calc(2 * var(--spacing-sm));
   margin-left: auto;
   margin-right: auto;
 }

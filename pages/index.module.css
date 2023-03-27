@@ -1,5 +1,19 @@
 .indexPage {
+
 }
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+
+.imageContainer {
+    position: relative;;
+    width: 25rem;
+    height: 25rem;
+    overflow: hidden;
+  }
 
 .indexPage__about {
 }
