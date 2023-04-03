@@ -1,12 +1,17 @@
 import { useState, useCallback } from "react";
 
-export function useToggle(initialInputState = false) {
-  const [state, setState] = useState(initialInputState);
+type ToggleOwnProps = {
+  readonly initialState?: boolean;
+  readonly onToggle?: (state: boolean) => void;
+};
 
-  const handelToggle = useCallback(
-    () => setState((prevState) => !prevState),
-    []
-  );
+export function useToggle({ initialState = false, onToggle }: ToggleOwnProps = {}) {
+  const [state, setState] = useState(initialState);
 
-  return [state, handelToggle] as const;
+  const handleToggle = useCallback(() => {
+    setState((prevState) => !prevState);
+    onToggle && onToggle(!state);
+  }, [onToggle, state]);
+
+  return { state, handleToggle } as const;
 }

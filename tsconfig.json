@@ -21,6 +21,7 @@
     "baseUrl": ".",
     "paths": {
       // back end directory
+      "~*": ["*"],
       "~lib": ["lib"],
       "~lib/*": ["lib/*"],
       // front end directories
@@ -39,6 +40,6 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": [".next", "node_modules", "next.config.js"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "pages/services/[id]"],
+  "exclude": [".next", "node_modules", "next.config.cjss"]
 }

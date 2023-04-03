@@ -28,7 +28,7 @@ function Card({
 }: CardOwnProps) {
   return (
     <Component className={styles.card}>
-      <CardMedia src={src} alt={title} />
+      {/* <CardMedia src={src} alt={title} /> */}
       <CardMeta title={title} description={description} />
       {actions}
     </Component>

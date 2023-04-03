@@ -24,8 +24,8 @@ function ServicesList<T extends ServicesModel>({
       return (
         <NavLink
           key={service.id}
-          href={`${PATH_SERVICES}[slug]`}
-          as={`${PATH_SERVICES}${service.slug}`}
+          href={`${PATH_SERVICES}${service.id}`}
+          // as={`${PATH_SERVICES}${service.slug}`}
         >
           <Card
             as={"li"}

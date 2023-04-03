@@ -16,7 +16,7 @@ function getRoutesPath(routesPath: RoutesPath = ROUTES_PATH) {
 
 function Navigation({ as: Component = "div" }: NavigationOwnProps) {
   return (
-    <Component role="navigation" className={styles.navigation}>
+    <Component role="navigation" className={styles.root}>
       <Space>
         {getRoutesPath().map((path: string) => (
           <NavLink href={path} key={path}>
